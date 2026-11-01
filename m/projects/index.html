@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en" data-kind="mobile" data-alt="/projects/">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projects — Saniya Patel</title>
+<meta name="description" content="Company sprints by Saniya Patel.">
+<link rel="canonical" href="https://saniyakpatel.com/projects/">
+<meta property="og:title" content="Projects — Saniya Patel">
+<meta property="og:description" content="Company sprints by Saniya Patel.">
+<meta property="og:image" content="https://saniyakpatel.com/assets/4b6d535920b5.jpg">
+<meta property="og:url" content="https://saniyakpatel.com/m/projects/">
+<meta name="theme-color" content="#f8f8f9">
+<link rel="icon" type="image/png" href="/assets/7fbc09757fa4.png">
+<script>(function(){var d=document.documentElement,k=d.getAttribute('data-kind'),alt=d.getAttribute('data-alt'),BP=820;
+function w(){return window.innerWidth||d.clientWidth||1280}
+if(alt&&!/[?&]stay/.test(location.search)){if(k==='desktop'&&w()<BP){location.replace(alt+location.hash);return}if(k==='mobile'&&w()>=BP){location.replace(alt+location.hash);return}}
+function fit(){var x=w(),z=1;d.classList.remove('rflow');
+if(k==='desktop'){if(x>=BP){z=Math.min(x/1280,1.5)}else{d.classList.add('rflow')}}
+else{z=Math.min(x/390,1.35)}
+d.style.zoom=z===1?'':String(z);window.__z=z}
+fit();window.addEventListener('resize',fit)})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&amp;family=Playfair+Display:ital,wght@0,500;0,600;1,500&amp;display=swap" rel="stylesheet">
+<style>
+@font-face{font-family:'Thorny Rock';src:url(/assets/1cd9772c3e3c.woff2) format('woff2');font-display:swap}
+body{margin:0}
+a{color:inherit}
+html{scroll-behavior:smooth}
+.brush{font-family:'Thorny Rock','Playfair Display',serif;line-height:1;color:#283f73}
+.pretty{text-wrap:pretty}
+.mB{position:relative;display:inline-flex;align-items:center;min-height:44px;padding:0 4px;text-decoration:none;font-family:'Playfair Display',serif;font-size:20px;color:#111111;transition:color .2s ease}
+.mB svg{position:absolute;left:-4px;bottom:2px;width:calc(100% + 8px);height:12px;overflow:visible;pointer-events:none}
+.mB path{stroke-dasharray:140;stroke-dashoffset:140;transition:stroke-dashoffset .5s cubic-bezier(.65,0,.25,1)}
+.mB:hover{color:#283f73}
+.mB:hover path,.mB.on path{stroke-dashoffset:0}
+.mB.on{color:#283f73;font-style:italic}
+.mB:focus-visible{outline:2px solid #283f73;outline-offset:4px}
+/* RULE: brush-font (Thorny Rock) text is always written out by hand, left to right */
+.brush{display:inline-block;padding:.12em .22em;margin:-.12em -.22em;-webkit-mask-image:linear-gradient(90deg,#000 0 42%,transparent 58% 100%);mask-image:linear-gradient(90deg,#000 0 42%,transparent 58% 100%);-webkit-mask-size:260% 100%;mask-size:260% 100%;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-position:0 0;mask-position:0 0}
+@keyframes writeOn{from{-webkit-mask-position:100% 0;mask-position:100% 0}to{-webkit-mask-position:0 0;mask-position:0 0}}
+@keyframes rise{from{opacity:0;translate:0 28px}to{opacity:1;translate:none}}
+.go .write-load{animation:writeOn var(--wdur,1.4s) cubic-bezier(.45,.05,.3,1) var(--wd,.3s) both}
+.go .rise{animation:rise .8s cubic-bezier(.2,.7,.2,1) var(--d,.1s) both}
+.reveal .brush{-webkit-mask-position:100% 0;mask-position:100% 0}
+.reveal.in .brush{-webkit-mask-position:0 0;mask-position:0 0;transition:-webkit-mask-position var(--wdur,1.4s) cubic-bezier(.45,.05,.3,1) var(--wd,.4s),mask-position var(--wdur,1.4s) cubic-bezier(.45,.05,.3,1) var(--wd,.4s)}
+.reveal .up{opacity:0;translate:0 28px;transition:opacity .8s ease var(--d,.1s),translate .9s cubic-bezier(.2,.7,.2,1) var(--d,.1s)}
+.reveal.in .up{opacity:1;translate:none}
+/* clickable cards are rounded */
+.card-t{display:flex;flex-direction:column;gap:16px;text-decoration:none;color:inherit}
+.card-t .img{position:relative;display:flex;align-items:center;justify-content:center;border-radius:22px;overflow:hidden;font-size:14px;font-weight:600;letter-spacing:3px;transition:transform .5s cubic-bezier(.2,.7,.2,1),box-shadow .5s ease}
+.card-t:hover .img{transform:translateY(-6px);box-shadow:0 18px 40px var(--sh,rgba(40,63,115,.18))}
+.go-dot{position:absolute;top:18px;right:18px;width:48px;height:48px;border-radius:50%;background:#f8f8f9;color:#283f73;display:flex;align-items:center;justify-content:center;opacity:0;transform:scale(.8);transition:opacity .3s ease,transform .3s cubic-bezier(.2,.7,.2,1)}
+.card-t:hover .go-dot,.card-t:focus-visible .go-dot{opacity:1;transform:none}
+.card-t:focus-visible{outline:none}
+.card-t:focus-visible .img{outline:3px solid currentColor;outline-offset:4px}
+.cap{display:flex;flex-direction:column;gap:8px;padding:0 4px}
+.capmeta{font-size:14px;font-weight:600;letter-spacing:3px;white-space:nowrap}
+.capname{white-space:nowrap;font-family:'Playfair Display',serif;font-weight:600;font-size:30px;line-height:1.1;transition:color .2s ease}
+.textlink{display:inline-flex;align-items:center;gap:10px;min-height:44px;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:3px;border-bottom:2px solid currentColor}
+.textlink:hover{opacity:.75}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}.write-load,.go .rise{animation:none !important}.reveal .brush,.reveal.in .brush{-webkit-mask-position:0 0;mask-position:0 0;transition:none}.reveal .up{opacity:1;translate:none;transition:none}.card-t .img,.go-dot{transition:none}}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.capname{white-space:normal;text-wrap:pretty}
+.card-t:hover .capname{color:var(--hov,#283f73)}
+.mbar{height:64px;box-sizing:border-box;padding:0 20px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #dddbd7;background:#f8f8f9;position:sticky;top:0;z-index:30}
+.menu{display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 18px;border-radius:999px;border:1px solid #c9c6c1;background:#ffffff;font-family:'Inter Tight',sans-serif;font-size:14px;font-weight:600;letter-spacing:3px;color:#111111;text-decoration:none}
+.tabs{display:flex;gap:8px;overflow-x:auto;padding:14px 20px;scrollbar-width:none;background:rgba(248,248,249,.94);border-bottom:1px solid #dddbd7;position:sticky;top:64px;z-index:25}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:none;display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 18px;border-radius:999px;border:1px solid #c9c6c1;background:#ffffff;text-decoration:none;font-family:'Playfair Display',serif;font-size:17px;color:#111111;white-space:nowrap}
+.tab.on{background:#283f73;border-color:#283f73;color:#f8f8f9}
+.tab .cnt{font-family:'Inter Tight',sans-serif;font-size:14px;font-weight:600;opacity:.7}
+.mcards{display:flex;flex-direction:column;gap:40px}
+.capname{font-size:30px}
+.menu{cursor:pointer}
+.menu:focus-visible,.mclose:focus-visible{outline:3px solid #283f73;outline-offset:2px}
+@keyframes mIn{from{opacity:0;transform:translateY(-12px)}to{opacity:1;transform:none}}
+.msheet{position:absolute;inset:0 0 auto 0;min-height:844px;z-index:60;background:#283f73;color:#f8f8f9;padding:16px 20px 40px;box-sizing:border-box;display:flex;flex-direction:column;gap:28px;animation:mIn .35s cubic-bezier(.2,.7,.2,1) both}
+.msheet .brush{animation:writeOn 1.4s cubic-bezier(.45,.05,.3,1) .2s both}
+.mclose{width:48px;height:48px;border-radius:50%;border:1px solid rgba(248,248,249,.4);background:transparent;color:#f8f8f9;display:flex;align-items:center;justify-content:center;cursor:pointer}
+.mlink{display:flex;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid rgba(248,248,249,.2);text-decoration:none;color:#f8f8f9;font-family:'Playfair Display',serif;font-size:40px;line-height:1.1}
+.mlink.on{font-style:italic;color:#c8d3ea}
+.mlink .n{font-size:15px;font-style:italic;color:#c8d3ea}
+@media (prefers-reduced-motion: reduce){.msheet{animation:none}}
+</style>
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+<div id="dc-root"></div>
+<script type="text/html" id="dc-tpl">
+<div class="{{goCls}}" style="position: relative; width: 390px; background: #f8f8f9; font-family: 'Inter Tight', sans-serif; color: #111111">
+  <div class="mbar">
+    <a href="/m/" aria-label="Home" style="display: flex; align-items: center; min-height: 44px"><img src="/assets/7fbc09757fa4.png" alt="" style="height: 30px; width: auto"></a>
+    <button class="menu" onClick="{{openMenu}}" aria-label="Open menu">MENU <svg aria-hidden="true" width="18" height="12" viewBox="0 0 18 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M1 1 H17"></path><path d="M1 6 H17"></path><path d="M1 11 H17"></path></svg></button>
+  </div>
+  <sc-if value="{{menu}}" hint-placeholder-val="{{ false }}">
+  <nav class="msheet" aria-label="Menu">
+    <div style="display: flex; justify-content: space-between; align-items: center">
+      <span style="font-size: 14px; font-weight: 600; letter-spacing: 3px; color: #c8d3ea">VOL. 01 · FALL 2026</span>
+      <button class="mclose" onClick="{{closeMenu}}" aria-label="Close menu"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2 2 L14 14"></path><path d="M14 2 L2 14"></path></svg></button>
+    </div>
+    <span class="brush" style="font-size: 64px; color: #c8d3ea; align-self: flex-start">saniya patel</span>
+    <div style="display: flex; flex-direction: column">
+      <a class="mlink" href="/m/"><span class="n">01</span>Home</a>
+      <a class="mlink" href="/m/about/"><span class="n">02</span>About</a>
+      <a class="mlink on" href="/m/projects/" aria-current="page"><span class="n">03</span>Projects</a>
+      <a class="mlink" href="/m/contact/"><span class="n">04</span>Contact</a>
+    </div>
+  </nav>
+  </sc-if>
+  <header style="padding: 36px 20px 24px; display: flex; flex-direction: column; gap: 14px">
+    <span style="font-size: 14px; font-weight: 600; letter-spacing: 3px; color: #4a4a4f">01 — THE WORK</span>
+    <span class="brush write-load" style="--wd: .2s; --wdur: 1.5s; font-size: 88px; align-self: flex-start">projects</span>
+    <p style="margin: 0; font-family: 'Playfair Display', serif; font-weight: 500; font-size: 30px; line-height: 1.15">Three ways I turn<br>ideas into real work.</p>
+  </header>
+  <nav class="tabs" aria-label="Project chapters">
+    <a class="tab on" href="/m/projects/" aria-current="page">Company Sprints<span class="cnt">5</span></a>
+    <a class="tab" href="/m/projects/pitches/">Pitches<span class="cnt">6</span></a>
+    <a class="tab" href="/m/projects/art-design/">Art & Design<span class="cnt">4</span></a>
+  </nav>
+  <section style="background: #f8f8f9; color: #111111; padding: 40px 20px 56px; --hov: #283f73">
+    <div style="display: flex; flex-direction: column; gap: 14px; padding-bottom: 32px">
+      <span style="font-size: 14px; font-weight: 600; letter-spacing: 3px; color: #4a4a4f">CHAPTER 01 · 5 PROJECTS</span>
+      <span class="brush write-load" style="--wd: .6s; --wdur: 1.4s; font-size: 64px; line-height: .95; color: #283f73; align-self: flex-start">company<br>sprints</span>
+      <p class="pretty" style="margin: 0; font-size: 17px; line-height: 1.5; color: #3a3a3f">Real briefs from real companies, solved in fast team sprints.</p>
+    </div>
+    <div class="mcards">
+      <a class="card-t" href="/work/spotify/" style="--sh: rgba(40,63,115,.18)" aria-label="Open Spotify">
+        <span class="img" style="height: 260px; background: #c8d3ea url(/assets/fa6009d3fad1.jpg) center/cover no-repeat; color: #1f2a40"></span>
+        <span class="cap"><span class="capmeta" style="color: #4a4a4f">COMPANY SPRINT</span><span class="capname">Spotify</span><span class="pretty" style="font-size: 17px; line-height: 1.45; color: #3a3a3f">Designed Pizza Jam, a new playlist feature</span></span>
+      </a>
+      <a class="card-t" href="/work/cnn/" style="--sh: rgba(40,63,115,.18)" aria-label="Open CNN">
+        <span class="img" style="height: 220px; background: #dde4f1 url(/assets/4df6d964cb40.jpg) center/cover no-repeat; color: #1f2a40"></span>
+        <span class="cap"><span class="capmeta" style="color: #4a4a4f">COMPANY SPRINT</span><span class="capname">CNN</span><span class="pretty" style="font-size: 17px; line-height: 1.45; color: #3a3a3f">Researched student voting · pitched to CNN Inside Politics</span></span>
+      </a>
+      <a class="card-t" href="/work/forerunner-ventures/" style="--sh: rgba(40,63,115,.18)" aria-label="Open Forerunner Ventures">
+        <span class="img" style="height: 220px; background: #c8d3ea url(/assets/c0ea51d4834d.jpg) center/cover no-repeat; color: #1f2a40"></span>
+        <span class="cap"><span class="capmeta" style="color: #4a4a4f">COMPANY SPRINT</span><span class="capname">Forerunner Ventures</span><span class="pretty" style="font-size: 17px; line-height: 1.45; color: #3a3a3f">Designed & prototyped Signal, a brand-trust tool for VCs</span></span>
+      </a>
+      <a class="card-t" href="/work/traba/" style="--sh: rgba(40,63,115,.18)" aria-label="Open Traba">
+        <span class="img" style="height: 220px; background: #dde4f1 url(/assets/0bcedc06dbfc.jpg) center/cover no-repeat; color: #1f2a40"></span>
+        <span class="cap"><span class="capmeta" style="color: #4a4a4f">COMPANY SPRINT</span><span class="capname">Traba</span><span class="pretty" style="font-size: 17px; line-height: 1.45; color: #3a3a3f">Project manager · growth strategy for an NYC startup</span></span>
+      </a>
+      <a class="card-t" href="/work/honda/" style="--sh: rgba(40,63,115,.18)" aria-label="Open Honda">
+        <span class="img" style="height: 220px; background: #c8d3ea url(/assets/215d56b2d6e3.jpg) center/cover no-repeat; color: #1f2a40"></span>
+        <span class="cap"><span class="capmeta" style="color: #4a4a4f">COMPANY SPRINT</span><span class="capname">Honda</span><span class="pretty" style="font-size: 17px; line-height: 1.45; color: #3a3a3f">R&D design pitch for Honda’s future software-defined vehicles</span></span>
+      </a>
+    </div>
+  </section>
+  <footer style="padding: 40px 20px 48px; display: flex; flex-direction: column; gap: 20px">
+    <div style="border-top: 2px solid #111111; padding-top: 20px; display: flex; flex-direction: column; gap: 8px">
+      <span style="font-size: 14px; font-weight: 600; letter-spacing: 3px; color: #4a4a4f">NEXT IN THIS ISSUE</span>
+      <a href="/about/" style="display: flex; align-items: baseline; gap: 14px; text-decoration: none"><span style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 20px; color: #283f73">02</span><span style="font-family: 'Playfair Display', serif; font-weight: 600; font-size: 30px; line-height: 1">About</span></a>
+    </div>
+  </footer>
+</div>
+</script>
+<noscript><p style="font-family:sans-serif;padding:40px">This site needs JavaScript to show its pages. Contact: <a href="mailto:saniyap@usc.edu">saniyap@usc.edu</a></p></noscript>
+<script src="/assets/dc-lite.js"></script>
+<script>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { live: false, ready: false, shown: {}, slide: 0, sn: 0, menu: false };
+    this.check = this.check.bind(this);
+  }
+  componentDidMount() {
+    this.reduce = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+    window.addEventListener('resize', this.check);
+    document.querySelectorAll('video.herovid').forEach((v) => { v.muted = true; if (this.reduce) { v.pause(); v.controls = true; } else { const pr = v.play(); if (pr && pr.catch) pr.catch(() => { v.controls = true; }); } });
+    this.check(); this.t1 = setTimeout(this.check, 250); this.t2 = setTimeout(this.check, 1200);
+  }
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.check);
+    
+    if (this.io) this.io.disconnect();
+    clearTimeout(this.t1); clearTimeout(this.t2);
+  }
+  // Animations arm only when the page can scroll (Play / a real browser), so the canvas stays still.
+  check() {
+    if (this.state.live) return;
+    const doc = document.documentElement;
+    if ((doc.scrollHeight - (window.innerHeight || 0)) <= 240) return;
+    this.setState({ live: true });
+    
+    if (this.reduce || !('IntersectionObserver' in window)) return;
+    this.io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          const k = e.target.getAttribute('data-reveal');
+          this.setState((st) => ({ shown: Object.assign({}, st.shown, { [k]: true }) }));
+          this.io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.02 });
+    document.querySelectorAll('[data-reveal]').forEach((el) => this.io.observe(el));
+    this.setState({ ready: true });
+  }
+  renderVals() {
+    const { live, ready, shown } = this.state;
+    const cls = (k) => (!ready ? '' : (shown[k] ? 'reveal in' : 'reveal'));
+    const rv = {};
+    for (let i = 1; i <= 8; i++) rv['s' + i] = cls('s' + i);
+    const out = { goCls: live ? 'go' : '', rv: rv, menu: this.state.menu, openMenu: () => this.setState({ menu: true }), closeMenu: () => this.setState({ menu: false }) };
+    return out;
+  }
+}
+DC.mount(Component);
+</script>
+</body>
+</html>

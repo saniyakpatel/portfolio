@@ -1,0 +1,42 @@
+/* saniyakpatel.com: shared layer on top of each page's own styles */
+html,body{background:#f8f8f9;margin:0}
+#dc-root>div{margin-left:auto;margin-right:auto}
+img,video{max-width:100%}
+
+/* ---- Phones on pages that only have a desktop design (html.rflow is set below 820px) ---- */
+html.rflow,html.rflow body{overflow-x:hidden}
+html.rflow #dc-root>div{width:100%!important;overflow-x:hidden}
+html.rflow #dc-root img,html.rflow #dc-root video{max-width:100%}
+/* one column, tighter gutters */
+html.rflow #dc-root [style*="grid-template-columns"]{grid-template-columns:minmax(0,1fr)!important}
+html.rflow #dc-root [style*="grid-template-columns: repeat(4"],html.rflow #dc-root [style*="grid-template-columns: repeat(5"],html.rflow #dc-root [style*="grid-template-columns: repeat(6"]{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+html.rflow #dc-root [style*="padding:"][style*=" 56px"]{padding-left:20px!important;padding-right:20px!important}
+html.rflow #dc-root [style*="padding: 104px"],html.rflow #dc-root [style*="padding: 92px"]{padding-top:48px!important}
+html.rflow #dc-root [style*="gap: 104px"]{gap:48px!important}
+html.rflow #dc-root [style*="gap: 56px"],html.rflow #dc-root [style*="gap: 80px"]{gap:32px!important}
+html.rflow #dc-root [style*="gap: 40px"]{gap:24px!important}
+/* fixed-size media become fluid */
+html.rflow #dc-root [style*="width: 520px"],html.rflow #dc-root [style*="width: 450px"],html.rflow #dc-root [style*="width: 360px"]{width:100%!important;height:auto!important}
+html.rflow #dc-root img[style*="height: 520px"],html.rflow #dc-root img[style*="height: 600px"]{aspect-ratio:1/1;height:auto!important}
+html.rflow #dc-root img[style*="width: 450px"]{aspect-ratio:3/4}
+html.rflow #dc-root [style*="height: 520px"]:not(img){height:auto!important;min-height:240px}
+html.rflow #dc-root [style*="height: 300px"]{height:220px!important}
+/* type scales down */
+html.rflow #dc-root [style*="font-size: 150px"],html.rflow #dc-root [style*="font-size: 104px"]{font-size:64px!important}
+html.rflow #dc-root [style*="font-size: 84px"],html.rflow #dc-root [style*="font-size: 68px"],html.rflow #dc-root [style*="font-size: 64px"]{font-size:44px!important}
+html.rflow #dc-root [style*="font-size: 40px"]{font-size:30px!important}
+html.rflow #dc-root .capname,html.rflow #dc-root .capmeta,html.rflow #dc-root [style*="nowrap"]{white-space:normal!important}
+/* rows that sat side by side now wrap */
+html.rflow #dc-root [style*="justify-content: space-between"]{flex-wrap:wrap;row-gap:14px}
+/* top bar */
+html.rflow #dc-root nav[aria-label="Sections"]{height:64px!important;padding:0 16px!important}
+html.rflow #dc-root nav[aria-label="Sections"] a>span{display:none}
+html.rflow #dc-root nav[aria-label="Sections"]>div{gap:14px!important}
+html.rflow #dc-root nav[aria-label="Sections"] .mB{font-size:16px}
+/* slide viewers */
+html.rflow #dc-root .dnav{width:44px;height:44px;margin-top:-22px}
+html.rflow #dc-root .dnav.prev{left:8px}html.rflow #dc-root .dnav.next{right:8px}
+html.rflow #dc-root .thumbs{grid-template-columns:repeat(5,minmax(0,1fr))!important}
+html.rflow #dc-root .ghostnum{display:none}
+html.rflow #dc-root .cdot{width:10px!important;height:10px!important}
+html.rflow #dc-root [style*="justify-content: space-between"]:has(.cdot)>span:first-child{letter-spacing:1.5px!important}

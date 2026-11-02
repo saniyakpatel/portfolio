@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>About — Saniya Patel</title>
 <meta name="description" content="About Saniya Patel: design, technology and business.">
-<link rel="canonical" href="https://saniyapatel.com/about/">
+<link rel="canonical" href="https://saniyakpatel.com/about/">
 <meta property="og:title" content="About — Saniya Patel">
 <meta property="og:description" content="About Saniya Patel: design, technology and business.">
-<meta property="og:image" content="https://saniyapatel.com/assets/4b6d535920b5.jpg">
-<meta property="og:url" content="https://saniyapatel.com/about/">
+<meta property="og:image" content="https://saniyakpatel.com/assets/4b6d535920b5.jpg">
+<meta property="og:url" content="https://saniyakpatel.com/about/">
 <meta name="theme-color" content="#f8f8f9">
 <link rel="icon" type="image/png" href="/assets/7fbc09757fa4.png">
 <script>(function(){var d=document.documentElement,k=d.getAttribute('data-kind'),alt=d.getAttribute('data-alt'),BP=820;
@@ -71,8 +71,8 @@ a{color:#111111}a:hover{color:#283f73}
 .tile .ph{transition:transform .5s cubic-bezier(.2,.7,.2,1)}
 .tile:hover .ph{transform:translateY(-6px)}
 .shot{break-inside:avoid;-webkit-column-break-inside:avoid;display:inline-block;width:100%;vertical-align:top}
-.shot div{transition:transform .5s cubic-bezier(.2,.7,.2,1),filter .3s ease}
-.shot:hover div{transform:translateY(-4px);filter:brightness(1.03)}
+.shot img,.shot video{transition:transform .5s cubic-bezier(.2,.7,.2,1),filter .3s ease}
+.shot:hover img,.shot:hover video{transform:translateY(-4px);filter:brightness(1.03)}
 /* logo strip */
 @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 .marquee{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
@@ -101,7 +101,7 @@ a{color:#111111}a:hover{color:#283f73}
     <div style="display: flex; gap: 40px">
       <a class="mB" href="/">Home<svg aria-hidden="true" viewBox="0 0 100 12" preserveAspectRatio="none"><path d="M2 8 C25 3 60 4 98 6 M70 10 L96 9" fill="none" stroke="#283f73" stroke-width="2.4" stroke-linecap="round"></path></svg></a>
       <a class="mB on" href="/about/" aria-current="page">About<svg aria-hidden="true" viewBox="0 0 100 12" preserveAspectRatio="none"><path d="M2 8 C25 3 60 4 98 6 M70 10 L96 9" fill="none" stroke="#283f73" stroke-width="2.4" stroke-linecap="round"></path></svg></a>
-      <a class="mB" href="/">Projects<svg aria-hidden="true" viewBox="0 0 100 12" preserveAspectRatio="none"><path d="M2 8 C25 3 60 4 98 6 M70 10 L96 9" fill="none" stroke="#283f73" stroke-width="2.4" stroke-linecap="round"></path></svg></a>
+      <a class="mB" href="/projects/">Projects<svg aria-hidden="true" viewBox="0 0 100 12" preserveAspectRatio="none"><path d="M2 8 C25 3 60 4 98 6 M70 10 L96 9" fill="none" stroke="#283f73" stroke-width="2.4" stroke-linecap="round"></path></svg></a>
       <a class="mB" href="/contact/">Contact<svg aria-hidden="true" viewBox="0 0 100 12" preserveAspectRatio="none"><path d="M2 8 C25 3 60 4 98 6 M70 10 L96 9" fill="none" stroke="#283f73" stroke-width="2.4" stroke-linecap="round"></path></svg></a>
     </div>
   </nav>
@@ -197,51 +197,41 @@ a{color:#111111}a:hover{color:#283f73}
     </div>
   </section>
 
-  <!-- OFF THE CLOCK: four interests -->
-  <section data-reveal="clock" class="{{rv.clock}}" aria-label="Off the clock" style="padding: 112px 56px 0; display: flex; flex-direction: column; gap: 40px">
-    <div class="hdr" style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 2px solid #111111; padding-bottom: 10px">
-      <h2 class="up" style="margin: 0; font-size: 14px; font-weight: 600; letter-spacing: 3px">OFF THE CLOCK</h2>
-      <span class="brush" style="--wd: .55s; --wdur: 1.2s; font-size: 24px">what keeps me curious</span>
-    </div>
-    <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px">
-      <figure class="tile up" style="--d: 0.15s; margin: 0; display: flex; flex-direction: column; gap: 14px">
-        <div class="ph" style="height: 340px; background: #c8d3ea; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 600; letter-spacing: 3px; color: #1f2a40">[ PHOTO ]</div>
-        <figcaption style="display: flex; flex-direction: column; gap: 6px"><span class="brush" style="--wd: 0.55s; --wdur: 1.1s; font-size: 40px">fashion</span><span style="font-size: 15px; color: #3a3a3f">[One line about it]</span></figcaption>
-      </figure>
-      <figure class="tile up" style="--d: 0.27s; margin: 0; display: flex; flex-direction: column; gap: 14px; padding-top: 48px">
-        <div class="ph" style="height: 340px; background: #e4e2de; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 600; letter-spacing: 3px; color: #3a3a3f">[ PHOTO ]</div>
-        <figcaption style="display: flex; flex-direction: column; gap: 6px"><span class="brush" style="--wd: 0.67s; --wdur: 1.1s; font-size: 40px">dance</span><span style="font-size: 15px; color: #3a3a3f">[One line about it]</span></figcaption>
-      </figure>
-      <figure class="tile up" style="--d: 0.39s; margin: 0; display: flex; flex-direction: column; gap: 14px">
-        <div class="ph" style="height: 340px; background: #c8d3ea; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 600; letter-spacing: 3px; color: #1f2a40">[ PHOTO ]</div>
-        <figcaption style="display: flex; flex-direction: column; gap: 6px"><span class="brush" style="--wd: 0.79s; --wdur: 1.1s; font-size: 40px">travel</span><span style="font-size: 15px; color: #3a3a3f">[One line about it]</span></figcaption>
-      </figure>
-      <figure class="tile up" style="--d: 0.51s; margin: 0; display: flex; flex-direction: column; gap: 14px; padding-top: 48px">
-        <div class="ph" style="height: 340px; background: #e4e2de; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 600; letter-spacing: 3px; color: #3a3a3f">[ PHOTO ]</div>
-        <figcaption style="display: flex; flex-direction: column; gap: 6px"><span class="brush" style="--wd: 0.91s; --wdur: 1.1s; font-size: 40px">coffee</span><span style="font-size: 15px; color: #3a3a3f">[One line about it]</span></figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <!-- THROUGH MY LENS: photos I've taken -->
+    <!-- THROUGH MY LENS: photos I've taken -->
   <section data-reveal="lens" class="{{rv.lens}}" aria-label="Through my lens" style="padding: 112px 56px 0; display: flex; flex-direction: column; gap: 40px">
     <div class="hdr" style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 2px solid #111111; padding-bottom: 10px">
       <h2 class="up" style="margin: 0; font-size: 14px; font-weight: 600; letter-spacing: 3px">THROUGH MY LENS</h2>
       <span class="brush" style="--wd: .55s; --wdur: 1.2s; font-size: 24px">photos i have taken</span>
     </div>
-    <div style="position: relative; z-index: 1; column-count: 4; column-gap: 20px">
-      <figure class="shot up" style="--d: 0.10s; margin: 0 0 20px"><div style="height: 340px; background: #e4e2de; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 600; letter-spacing: 3px; color: #3a3a3f">[ PHOTO 01 ]</div></figure>
-      <figure class="shot up" style="--d: 0.24s; margin: 0 0 20px"><div style="height: 240px; background: #c8d3ea; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 600; letter-spacing: 3px; color: #1f2a40">[ PHOTO 02 ]</div></figure>
-      <figure class="shot up" style="--d: 0.38s; margin: 0 0 20px"><div style="height: 300px; background: #dcdad6; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 600; letter-spacing: 3px; color: #3a3a3f">[ PHOTO 03 ]</div></figure>
-      <figure class="shot up" style="--d: 0.20s; margin: 0 0 20px"><div style="height: 380px; background: #e4e2de; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 600; letter-spacing: 3px; color: #3a3a3f">[ PHOTO 04 ]</div></figure>
-      <figure class="shot up" style="--d: 0.34s; margin: 0 0 20px"><div style="height: 260px; background: #dcdad6; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 600; letter-spacing: 3px; color: #3a3a3f">[ PHOTO 05 ]</div></figure>
-      <figure class="shot up" style="--d: 0.48s; margin: 0 0 20px"><div style="height: 320px; background: #c8d3ea; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 600; letter-spacing: 3px; color: #1f2a40">[ PHOTO 06 ]</div></figure>
-      <figure class="shot up" style="--d: 0.30s; margin: 0 0 20px"><div style="height: 220px; background: #e4e2de; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 600; letter-spacing: 3px; color: #3a3a3f">[ PHOTO 07 ]</div></figure>
-      <figure class="shot up" style="--d: 0.44s; margin: 0 0 20px"><div style="height: 360px; background: #dcdad6; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 600; letter-spacing: 3px; color: #3a3a3f">[ PHOTO 08 ]</div></figure>
-      <figure class="shot up" style="--d: 0.58s; margin: 0 0 20px"><div style="height: 280px; background: #c8d3ea; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 600; letter-spacing: 3px; color: #1f2a40">[ PHOTO 09 ]</div></figure>
-      <figure class="shot up" style="--d: 0.40s; margin: 0 0 20px"><div style="height: 300px; background: #e4e2de; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 600; letter-spacing: 3px; color: #3a3a3f">[ PHOTO 10 ]</div></figure>
-      <figure class="shot up" style="--d: 0.54s; margin: 0 0 20px"><div style="height: 240px; background: #dcdad6; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 600; letter-spacing: 3px; color: #3a3a3f">[ PHOTO 11 ]</div></figure>
-      <figure class="shot up" style="--d: 0.68s; margin: 0 0 20px"><div style="height: 340px; background: #c8d3ea; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 600; letter-spacing: 3px; color: #1f2a40">[ PHOTO 12 ]</div></figure>
+    <div style="position: relative; z-index: 1; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; align-items: start">
+      <div style="display: flex; flex-direction: column; gap: 20px">
+        <figure class="shot up" style="--d: 0.00s; margin: 0"><img src="/assets/215b9e94bd7f.jpg" alt="Hot air balloons over a valley at sunrise" style="display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; background: #dde4f1"></figure>
+        <figure class="shot up" style="--d: 0.06s; margin: 0"><video src="/assets/fe255bcff70a.mp4" poster="/assets/95805ae7b8f8.jpg" autoplay muted loop playsinline preload="metadata" aria-label="The sun setting over the sea" style="display: block; width: 100%; aspect-ratio: 9 / 16; object-fit: cover; background: #dde4f1"></video></figure>
+        <figure class="shot up" style="--d: 0.12s; margin: 0"><img src="/assets/e10478f51388.jpg" alt="Skeins of dyed yarn and bowls of pigment at a market stall" style="display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; background: #dde4f1"></figure>
+        <figure class="shot up" style="--d: 0.18s; margin: 0"><img src="/assets/5a46648a318f.jpg" alt="A black cat sitting on a sunlit stone path" style="display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; background: #dde4f1"></figure>
+        <figure class="shot up" style="--d: 0.24s; margin: 0"><img src="/assets/956120234045.jpg" alt="Rock formations across a pale valley" style="display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; background: #dde4f1"></figure>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 20px">
+        <figure class="shot up" style="--d: 0.08s; margin: 0"><img src="/assets/c7abe149b86a.jpg" alt="A white cave bar lined with stools" style="display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; background: #dde4f1"></figure>
+        <figure class="shot up" style="--d: 0.14s; margin: 0"><img src="/assets/c506d5790a17.jpg" alt="Lily pads and pink water lilies" style="display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; background: #dde4f1"></figure>
+        <figure class="shot up" style="--d: 0.20s; margin: 0"><img src="/assets/54b6acaa927d.jpg" alt="Sunset over a harbour with boats" style="display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; background: #dde4f1"></figure>
+        <figure class="shot up" style="--d: 0.26s; margin: 0"><video src="/assets/27469b7f270a.mp4" poster="/assets/0b4e80251e53.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Two sailboats on open blue water" style="display: block; width: 100%; aspect-ratio: 9 / 16; object-fit: cover; background: #dde4f1"></video></figure>
+        <figure class="shot up" style="--d: 0.32s; margin: 0"><img src="/assets/b1b87215bcb5.jpg" alt="Coffee and small plates on a stone table" style="display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; background: #dde4f1"></figure>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 20px">
+        <figure class="shot up" style="--d: 0.16s; margin: 0"><video src="/assets/fe4f107f862f.mp4" poster="/assets/bbd89c756290.jpg" autoplay muted loop playsinline preload="metadata" aria-label="A tree-lined canal with boats" style="display: block; width: 100%; aspect-ratio: 9 / 16; object-fit: cover; background: #dde4f1"></video></figure>
+        <figure class="shot up" style="--d: 0.22s; margin: 0"><img src="/assets/3701d9842bfa.jpg" alt="A gilded painting on a deep teal gallery wall" style="display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; background: #dde4f1"></figure>
+        <figure class="shot up" style="--d: 0.28s; margin: 0"><img src="/assets/5da2a48553d2.jpg" alt="A red Vespa parked inside a shop" style="display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; background: #dde4f1"></figure>
+        <figure class="shot up" style="--d: 0.34s; margin: 0"><img src="/assets/a4416081eb4b.jpg" alt="An infinity pool above a coastline at dusk" style="display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; background: #dde4f1"></figure>
+        <figure class="shot up" style="--d: 0.40s; margin: 0"><img src="/assets/224ebf8a86c1.jpg" alt="A sculpted white pool table under a pendant light" style="display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; background: #dde4f1"></figure>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 20px">
+        <figure class="shot up" style="--d: 0.24s; margin: 0"><img src="/assets/57b1b98f5279.jpg" alt="Windmills above a seaside town" style="display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; background: #dde4f1"></figure>
+        <figure class="shot up" style="--d: 0.30s; margin: 0"><img src="/assets/b27a4e1aad56.jpg" alt="Strawberry waffles and a café menu" style="display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; background: #dde4f1"></figure>
+        <figure class="shot up" style="--d: 0.36s; margin: 0"><video src="/assets/ba47e3504f17.mp4" poster="/assets/3c7f907d027f.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Waves breaking around a rock arch" style="display: block; width: 100%; aspect-ratio: 9 / 16; object-fit: cover; background: #dde4f1"></video></figure>
+        <figure class="shot up" style="--d: 0.42s; margin: 0"><img src="/assets/542f5eb85ba6.jpg" alt="A city skyline with a tall tower across the water" style="display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; background: #dde4f1"></figure>
+        <figure class="shot up" style="--d: 0.48s; margin: 0"><img src="/assets/73bb0bd51ef4.jpg" alt="A drone light show of the Trojan mascot above the Coliseum" style="display: block; width: 100%; aspect-ratio: 9 / 16; object-fit: cover; background: #dde4f1"></figure>
+      </div>
     </div>
   </section>
 

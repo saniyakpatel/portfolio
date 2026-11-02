@@ -365,8 +365,9 @@ class Component extends DCLogic {
       const yb = Math.round(o.y - so.y + t.offsetHeight + 10);
       d += ' C' + m + ' ' + Math.round(cy + (yb - cy) * 0.55) + ' ' + m + ' ' + (yb - 30) + ' ' + (x0 - 6) + ' ' + yb;
       d += ' C' + Math.round(x0 + (x1 - x0) * 0.3) + ' ' + (yb + 5) + ' ' + Math.round(x0 + (x1 - x0) * 0.7) + ' ' + (yb - 4) + ' ' + x1 + ' ' + (yb + 1);
-      // lift the brush after the underline so it never crosses the story text, then pick up again at the margin below it
-      d += ' M' + m + ' ' + (yb + 40);
+      // one continuous stroke: retrace back through the gap under the title (above the body text), then drop down the left margin
+      d += ' C' + (x1 - 40) + ' ' + (yb + 5) + ' ' + Math.round(x0 + 40) + ' ' + (yb + 5) + ' ' + (x0 - 6) + ' ' + (yb + 4);
+      d += ' C' + (x0 - 18) + ' ' + (yb + 6) + ' ' + m + ' ' + (yb + 8) + ' ' + m + ' ' + (yb + 40);
       cy = yb + 40;
     });
     d += ' C' + m + ' ' + Math.round(cy + (H - 140 - cy) * 0.6) + ' ' + m + ' ' + (H - 150) + ' ' + 300 + ' ' + (H - 170);
@@ -389,7 +390,9 @@ class Component extends DCLogic {
       let brushProg = 0, workFill = 0;
       if (sec) {
         const r = sec.getBoundingClientRect();
-        brushProg = clamp((vh * 0.72 - r.top) / (r.height - 120));
+        const maxY = Math.max(1, document.documentElement.scrollHeight - vh);
+        const reachAtEnd = vh * 0.72 - (r.top + y - maxY);
+        brushProg = clamp((vh * 0.72 - r.top) / Math.max(60, Math.min(r.height - 120, reachAtEnd)));
         workFill = clamp((vh * 0.5 - r.top) / r.height);
       }
       const nums = {};

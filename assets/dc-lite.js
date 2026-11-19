@@ -1,4 +1,4 @@
-/* dc-lite.js: a tiny runtime for saniyakpatel.com.
+/* dc-lite.js: a tiny runtime for saniyapatel.com.
    Each page ships its markup in <template id="dc-tpl"> and one `class Component extends DCLogic`.
    Supports: {{path}} holes in text and attributes, <sc-if value="{{path}}">, onClick="{{fn}}",
    state / setState(updater, callback) / renderVals / componentDidMount / componentDidUpdate / componentWillUnmount.

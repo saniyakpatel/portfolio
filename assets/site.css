@@ -1,4 +1,4 @@
-/* saniyakpatel.com: shared layer on top of each page's own styles */
+/* saniyapatel.com: shared layer on top of each page's own styles */
 html,body{background:#f8f8f9;margin:0}
 #dc-root>div{margin-left:auto;margin-right:auto}
 img,video{max-width:100%}
@@ -40,3 +40,6 @@ html.rflow #dc-root .thumbs{grid-template-columns:repeat(5,minmax(0,1fr))!import
 html.rflow #dc-root .ghostnum{display:none}
 html.rflow #dc-root .cdot{width:10px!important;height:10px!important}
 html.rflow #dc-root [style*="justify-content: space-between"]:has(.cdot)>span:first-child{letter-spacing:1.5px!important}
+
+/* ---- Laptops & desktops: the layout widens to the window instead of being enlarged ---- */
+html.fluid:not([data-fixed]) #dc-root>div{width:100%!important}

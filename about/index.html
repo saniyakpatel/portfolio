@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>About — Saniya Patel</title>
 <meta name="description" content="About Saniya Patel: design, technology and business.">
-<link rel="canonical" href="https://saniyakpatel.com/about/">
+<link rel="canonical" href="https://saniyapatel.com/about/">
 <meta property="og:title" content="About — Saniya Patel">
 <meta property="og:description" content="About Saniya Patel: design, technology and business.">
-<meta property="og:image" content="https://saniyakpatel.com/assets/4b6d535920b5.jpg">
-<meta property="og:url" content="https://saniyakpatel.com/about/">
+<meta property="og:image" content="https://saniyapatel.com/assets/4b6d535920b5.jpg">
+<meta property="og:url" content="https://saniyapatel.com/about/">
 <meta name="theme-color" content="#f8f8f9">
 <link rel="icon" type="image/png" href="/assets/7fbc09757fa4.png">
 <script>(function(){var d=document.documentElement,k=d.getAttribute('data-kind'),alt=d.getAttribute('data-alt'),BP=820;
@@ -84,6 +84,28 @@ a{color:#111111}a:hover{color:#283f73}
 .logo:hover .lm{background:#f8f8f9}
 @media (prefers-reduced-motion: reduce){.wipe,.enter,.unveil-load{animation:none}.reveal .up{opacity:1;translate:none;transition:none}.reveal .hdr,.reveal .hdrtop{background:none;border-color:#111111 !important}.track{animation:none;flex-wrap:wrap;width:auto;padding:8px 56px}.track [aria-hidden]{display:none}}
 .pretty{text-wrap:pretty}
+
+/* about v2 */
+.hero2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);height:720px}
+.hero2 .side{background:#c8d3ea;padding:0 56px 72px;display:flex;flex-direction:column;justify-content:flex-end;gap:26px}
+.lens2{display:grid;grid-template-columns:minmax(0,600fr) minmax(0,504fr);gap:64px;align-items:stretch}
+.stage{position:relative;aspect-ratio:600 / 760;overflow:hidden;background:#dde4f1}
+.sm{opacity:0;transform:scale(1.04);transition:opacity .7s ease,transform 1.4s cubic-bezier(.2,.7,.2,1)}
+.sm.on{opacity:1;transform:none}
+.capwrap{position:relative;height:150px}
+.cap{position:absolute;left:0;top:0;display:flex;flex-direction:column;gap:14px;opacity:0;translate:0 22px;transition:opacity .45s ease,translate .6s cubic-bezier(.2,.7,.2,1)}
+.cap.on{opacity:1;translate:none;transition-delay:.12s}
+.city{font-family:'Familjen Grotesk',sans-serif;font-style:italic;font-weight:400;font-size:76px;line-height:1;color:#111111;white-space:nowrap}
+.thumbs{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:20px;width:100%}
+.th{width:100%;aspect-ratio:1;height:auto;padding:0;border:none;border-radius:999px;overflow:hidden;cursor:pointer;background:#dde4f1;box-shadow:0 0 0 0 #283f73;transition:box-shadow .3s ease,transform .3s cubic-bezier(.2,.7,.2,1)}
+.th img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.75);opacity:.8;transition:filter .3s ease,opacity .3s ease}
+.th:hover{transform:translateY(-3px)}
+.th:hover img,.th.on img{filter:none;opacity:1}
+.th.on{box-shadow:0 0 0 3px #f8f8f9,0 0 0 5px #283f73}
+.th:focus-visible{outline:3px solid #283f73;outline-offset:4px}
+.pill2{display:inline-flex;align-items:center;gap:12px;min-height:52px;padding:0 30px;border-radius:999px;background:#283f73;color:#f8f8f9;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:3px;transition:background-color .25s ease,transform .25s ease}
+.pill2:hover{background:#1f3360;color:#f8f8f9;transform:translateY(-2px)}
+@media (prefers-reduced-motion: reduce){.sm,.cap,.th{transition:none}}
 </style>
 <link rel="stylesheet" href="/assets/site.css">
 </head>
@@ -92,7 +114,6 @@ a{color:#111111}a:hover{color:#283f73}
 <script type="text/html" id="dc-tpl">
 <div style="width: 1280px; background: #f8f8f9; font-family: 'Inter Tight', sans-serif; color: #111111">
 
-  <!-- top bar: same as the landing page's contents bar, About highlighted -->
   <nav aria-label="Sections" style="height: 84px; box-sizing: border-box; padding: 0 56px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #dddbd7">
     <a href="/" aria-label="Back to the cover" style="display: flex; align-items: center; gap: 14px; text-decoration: none; min-height: 44px">
       <img src="/assets/7fbc09757fa4.png" alt="" style="height: 32px; width: auto">
@@ -105,80 +126,26 @@ a{color:#111111}a:hover{color:#283f73}
     </div>
   </nav>
 
-  <!-- HERO: dress-blue panel + portrait -->
-  <header class="{{heroCls}}" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); height: 660px">
-    <div style="background: #c8d3ea; padding: 64px 56px 56px; display: flex; flex-direction: column; justify-content: space-between">
-      <div class="enter" style="--d: .2s; display: flex; justify-content: space-between; align-items: baseline; border-bottom: 2px solid #111111; padding-bottom: 10px">
-        <span style="font-size: 14px; font-weight: 600; letter-spacing: 3px">02 — ABOUT</span>
-        <span class="brush write-load" style="--wd: .55s; --wdur: 1.1s; font-size: 24px">the profile</span>
-      </div>
-      <div style="display: flex; flex-direction: column; gap: 22px">
-        <span class="brush write-load" style="--wd: .35s; --wdur: 1.9s; font-size: 150px; margin-left: calc(-6px - .22em)">about me</span>
-        <h1 class="enter" style="--d: 1.0s; margin: 0; font-family: 'Familjen Grotesk', sans-serif; font-weight: 500; font-size: 40px; line-height: 1.05; color: #283f73">Hi, I&#39;m Saniya.</h1>
-        <p class="enter" style="--d: 1.15s; margin: 0; font-size: 17px; line-height: 1.5; color: #1f2a40"><span style="white-space: nowrap">Innovator in Los Angeles at the</span><br><span style="white-space: nowrap">USC Iovine and Young Academy.</span></p>
-      </div>
+  <!-- HERO: one line, the photo does the rest -->
+  <header class="hero2 {{heroCls}}">
+    <div class="side">
+      <span class="brush write-load" style="--wd: .35s; --wdur: 1.9s; font-size: 150px; align-self: flex-start; margin-left: calc(-6px - .22em)">about me</span>
+      <p class="enter" style="--d: 1.1s; margin: 0; font-family: 'Familjen Grotesk', sans-serif; font-weight: 400; font-size: 40px; line-height: 1.15; color: #1f2a40">I've always loved<br>design and the arts.</p>
     </div>
-    <div style="position: relative; overflow: hidden; background: #e4e2de">
+    <div style="position: relative; overflow: hidden; background: #ebe6dd">
       <img class="unveil-load" src="/assets/5ecace110018.jpg" alt="Saniya Patel in a pale yellow lace dress under string lights" style="width: 100%; height: 100%; object-fit: cover; object-position: 52% 35%; display: block">
     </div>
   </header>
 
-  <!-- THE PROFILE: story + details box -->
-  <section data-reveal="story" class="{{rv.story}}" aria-label="Profile" style="position: relative; overflow: hidden; padding: 96px 56px 110px; display: flex; flex-direction: column; gap: 48px">
-    <div class="hdr" style="position: relative; z-index: 1; display: flex; justify-content: space-between; align-items: baseline; border-bottom: 2px solid #111111; padding-bottom: 10px">
-      <h2 class="up" style="margin: 0; font-size: 14px; font-weight: 600; letter-spacing: 3px">THE STORY SO FAR</h2>
-      <span class="brush" style="--wd: .55s; --wdur: 1.2s; font-size: 24px">in my own words</span>
-    </div>
-    <img class="ghostmark" src="/assets/60460d8a82f1.png" alt="" aria-hidden="true" style="transform: translateY({{drift.mark}})">
-    <div style="position: relative; z-index: 1; display: grid; grid-template-columns: 7fr 5fr; gap: 72px; align-items: start">
-      <div style="display: flex; flex-direction: column">
-        <div class="up" style="--d: .2s; display: grid; grid-template-columns: 120px 1fr; gap: 24px; padding: 26px 0; border-top: 1px solid #dddbd7;">
-          <span style="font-size: 14px; font-weight: 600; letter-spacing: 3px; color: #283f73; padding-top: 8px">THEN</span>
-          <div style="display: flex; flex-direction: column; gap: 8px">
-            <p style="margin: 0; font-family: 'Familjen Grotesk', sans-serif; font-weight: 400; font-size: 30px; line-height: 1.15"><span style="white-space: nowrap">I&#39;ve always loved</span><br><span style="white-space: nowrap">design and the arts</span></p>
-            <p class="pretty" style="margin: 0; font-size: 15px; line-height: 1.5; color: #3a3a3f; max-width: 470px">So I started Arista, my own nonprofit jewelry business. I designed the brand and every product, and donated <strong style="color: #283f73">over 1,000 pieces</strong> to domestic abuse survivor shelters.</p>
-          </div>
-        </div>
-        <div class="up" style="--d: .35s; display: grid; grid-template-columns: 120px 1fr; gap: 24px; padding: 26px 0; border-top: 1px solid #dddbd7;">
-          <span style="font-size: 14px; font-weight: 600; letter-spacing: 3px; color: #283f73; padding-top: 8px">NOW</span>
-          <div style="display: flex; flex-direction: column; gap: 8px">
-            <p style="margin: 0; font-family: 'Familjen Grotesk', sans-serif; font-weight: 400; font-size: 30px; line-height: 1.15"><span style="white-space: nowrap">Looking for my next</span><br><span style="white-space: nowrap">role as a designer</span></p>
-            <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #3a3a3f">Studying design, technology &amp; business at USC Iovine and Young.</p>
-          </div>
-        </div>
-        <div class="up" style="--d: .5s; display: grid; grid-template-columns: 120px 1fr; gap: 24px; padding: 26px 0; border-top: 1px solid #dddbd7; border-bottom: 1px solid #dddbd7;">
-          <span style="font-size: 14px; font-weight: 600; letter-spacing: 3px; color: #283f73; padding-top: 8px">NEXT</span>
-          <div style="display: flex; flex-direction: column; gap: 8px">
-            <p style="margin: 0; font-family: 'Familjen Grotesk', sans-serif; font-weight: 400; font-size: 30px; line-height: 1.15"><span style="white-space: nowrap">Bringing my interests</span><br><span style="white-space: nowrap">and experience together</span></p>
-            <p class="pretty" style="margin: 0; font-size: 15px; line-height: 1.5; color: #3a3a3f">To deliver real value in my work and offer a new perspective.</p>
-          </div>
-        </div>
-      </div>
-      <aside class="up" aria-label="The details" style="--d: .45s; background: #c8d3ea; padding: 32px 32px 28px; display: flex; flex-direction: column; gap: 18px">
-        <span style="font-size: 14px; font-weight: 600; letter-spacing: 3px; color: #1f2a40">THE DETAILS</span>
-        <dl style="margin: 0; display: flex; flex-direction: column">
-          <div style="display: flex; justify-content: space-between; gap: 16px; padding: 12px 0; border-top: 1px solid rgba(40,63,115,.25)"><dt style="font-size: 14px; font-weight: 600; letter-spacing: 3px; color: #283f73">BASED IN</dt><dd style="margin: 0; font-size: 15px; text-align: right">Los Angeles</dd></div>
-          <div style="display: flex; justify-content: space-between; gap: 16px; padding: 12px 0; border-top: 1px solid rgba(40,63,115,.25)"><dt style="font-size: 14px; font-weight: 600; letter-spacing: 3px; color: #283f73">STUDYING</dt><dd style="margin: 0; font-size: 15px; text-align: right">USC Iovine and Young</dd></div>
-          <div style="display: flex; justify-content: space-between; gap: 16px; padding: 12px 0; border-top: 1px solid rgba(40,63,115,.25)"><dt style="font-size: 14px; font-weight: 600; letter-spacing: 3px; color: #283f73">FOCUS</dt><dd style="margin: 0; font-size: 15px; text-align: right">Design · Tech · Business</dd></div>
-          <div style="display: flex; justify-content: space-between; gap: 16px; padding: 12px 0; border-top: 1px solid rgba(40,63,115,.25)"><dt style="font-size: 14px; font-weight: 600; letter-spacing: 3px; color: #283f73">CURRENTLY</dt><dd style="margin: 0; font-size: 15px; text-align: right">Looking for design roles</dd></div>
-          <div style="display: flex; justify-content: space-between; gap: 16px; padding: 12px 0; border-top: 1px solid rgba(40,63,115,.25); border-bottom: 1px solid rgba(40,63,115,.25)"><dt style="font-size: 14px; font-weight: 600; letter-spacing: 3px; color: #283f73">FUELLED BY</dt><dd style="margin: 0; font-size: 15px; text-align: right">Pumpkin spice latte</dd></div>
-        </dl>
-        <a class="cta" href="/assets/Saniya_Patel_Resume.pdf" target="_blank" rel="noopener" style="align-self: flex-start">DOWNLOAD RÉSUMÉ <svg aria-hidden="true" width="14" height="16" viewBox="0 0 14 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 1 V12"></path><path d="M2 8 L7 13 L12 8"></path><path d="M1 15 H13"></path></svg></a>
-      </aside>
-    </div>
-  </section>
-
-  <!-- WHERE I'VE WORKED: moving strip of company logos -->
-  <section data-reveal="work" class="{{rv.work}}" aria-label="Where I've worked" style="padding: 42px 0 0; display: flex; flex-direction: column; gap: 40px">
-    <div class="hdr" style="margin: 0 56px; display: flex; justify-content: space-between; align-items: baseline; border-bottom: 2px solid #111111; padding-bottom: 10px">
-      <h2 class="up" style="margin: 0; font-size: 14px; font-weight: 600; letter-spacing: 3px">WHERE I&#39;VE WORKED</h2>
-      <span class="brush" style="--wd: .55s; --wdur: 1.2s; font-size: 24px">teams i have worked with</span>
+  <!-- TEAMS: moving strip of logos -->
+  <section data-reveal="work" class="{{rv.work}}" aria-label="Teams I've worked with" style="padding: 104px 0 0; display: flex; flex-direction: column; gap: 40px">
+    <div class="hdr" style="margin: 0 56px; border-bottom: 2px solid #111111; padding-bottom: 10px">
+      <h2 class="up" style="margin: 0; font-size: 14px; font-weight: 600; letter-spacing: 3px">TEAMS I&#39;VE WORKED WITH</h2>
     </div>
     <div class="marquee up" style="--d: .25s">
       <ul class="track" aria-label="Companies">
           <li class="logo" style="--tile: #c8d3ea"><span class="lm" role="img" aria-label="AfterQuery" style="width: 160px; height: 30px; -webkit-mask-image: url(/assets/8fd61d7712bf.png); mask-image: url(/assets/8fd61d7712bf.png)"></span></li>
           <li class="logo" style="--tile: #ebe6dd"><span class="lm" role="img" aria-label="CNN Politics" style="width: 88px; height: 64px; -webkit-mask-image: url(/assets/58a3a0638a6a.png); mask-image: url(/assets/58a3a0638a6a.png)"></span></li>
-          <li class="logo" style="--tile: #dde4f1"><span class="lm" role="img" aria-label="Google" style="width: 128px; height: 42px; -webkit-mask-image: url(/assets/30992971211d.png); mask-image: url(/assets/30992971211d.png)"></span></li>
           <li class="logo" style="--tile: #f1ece4"><span class="lm" role="img" aria-label="Honda" style="width: 98px; height: 64px; -webkit-mask-image: url(/assets/3685bd56181d.png); mask-image: url(/assets/3685bd56181d.png)"></span></li>
           <li class="logo" style="--tile: #c8d3ea"><span class="lm" role="img" aria-label="Quid" style="width: 115px; height: 42px; -webkit-mask-image: url(/assets/7a31ef9f7bc7.png); mask-image: url(/assets/7a31ef9f7bc7.png)"></span></li>
           <li class="logo" style="--tile: #ebe6dd"><span class="lm" role="img" aria-label="Sunset Legacy Partners" style="width: 87px; height: 64px; -webkit-mask-image: url(/assets/9401317b9160.png); mask-image: url(/assets/9401317b9160.png)"></span></li>
@@ -186,7 +153,6 @@ a{color:#111111}a:hover{color:#283f73}
           <li class="logo" style="--tile: #f1ece4"><span class="lm" role="img" aria-label="Barclays" style="width: 160px; height: 26px; -webkit-mask-image: url(/assets/e606a5aa73f0.svg); mask-image: url(/assets/e606a5aa73f0.svg)"></span></li>
           <li class="logo" aria-hidden="true" style="--tile: #c8d3ea"><span class="lm" style="width: 160px; height: 30px; -webkit-mask-image: url(/assets/8fd61d7712bf.png); mask-image: url(/assets/8fd61d7712bf.png)"></span></li>
           <li class="logo" aria-hidden="true" style="--tile: #ebe6dd"><span class="lm" style="width: 88px; height: 64px; -webkit-mask-image: url(/assets/58a3a0638a6a.png); mask-image: url(/assets/58a3a0638a6a.png)"></span></li>
-          <li class="logo" aria-hidden="true" style="--tile: #dde4f1"><span class="lm" style="width: 128px; height: 42px; -webkit-mask-image: url(/assets/30992971211d.png); mask-image: url(/assets/30992971211d.png)"></span></li>
           <li class="logo" aria-hidden="true" style="--tile: #f1ece4"><span class="lm" style="width: 98px; height: 64px; -webkit-mask-image: url(/assets/3685bd56181d.png); mask-image: url(/assets/3685bd56181d.png)"></span></li>
           <li class="logo" aria-hidden="true" style="--tile: #c8d3ea"><span class="lm" style="width: 115px; height: 42px; -webkit-mask-image: url(/assets/7a31ef9f7bc7.png); mask-image: url(/assets/7a31ef9f7bc7.png)"></span></li>
           <li class="logo" aria-hidden="true" style="--tile: #ebe6dd"><span class="lm" style="width: 87px; height: 64px; -webkit-mask-image: url(/assets/9401317b9160.png); mask-image: url(/assets/9401317b9160.png)"></span></li>
@@ -196,11 +162,10 @@ a{color:#111111}a:hover{color:#283f73}
     </div>
   </section>
 
-    <!-- THROUGH MY LENS: photos I've taken -->
-  <section data-reveal="lens" class="{{rv.lens}}" aria-label="Through my lens" style="padding: 112px 56px 0; display: flex; flex-direction: column; gap: 40px">
-    <div class="hdr" style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 2px solid #111111; padding-bottom: 10px">
+  <!-- THROUGH MY LENS: the photo gallery, each with where I took it -->
+  <section data-reveal="lens" class="{{rv.lens}}" aria-label="Through my lens" style="padding: 120px 56px 0; display: flex; flex-direction: column; gap: 40px">
+    <div class="hdr" style="border-bottom: 2px solid #111111; padding-bottom: 10px">
       <h2 class="up" style="margin: 0; font-size: 14px; font-weight: 600; letter-spacing: 3px">THROUGH MY LENS</h2>
-      <span class="brush" style="--wd: .55s; --wdur: 1.2s; font-size: 24px">photos i have taken</span>
     </div>
     <div style="position: relative; z-index: 1; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; align-items: start">
       <div style="display: flex; flex-direction: column; gap: 20px">
@@ -234,18 +199,14 @@ a{color:#111111}a:hover{color:#283f73}
     </div>
   </section>
 
-  <!-- NEXT IN THIS ISSUE -->
-  <footer data-reveal="foot" class="{{rv.foot}}" style="padding: 92px 56px 72px">
-    <div class="hdrtop" style="border-top: 2px solid #111111; padding-top: 32px; display: flex; justify-content: space-between; align-items: flex-end; gap: 40px">
-      <div class="up" style="--d: .2s; display: flex; flex-direction: column; gap: 12px">
-        <span style="font-size: 14px; font-weight: 600; letter-spacing: 3px; color: #4a4a4f">NEXT IN THIS ISSUE</span>
-        <a class="next" href="/projects/">
-          <span style="font-family: 'Familjen Grotesk', sans-serif; font-style: italic; font-size: 30px; color: #283f73">03</span>
-          <span style="font-family: 'Familjen Grotesk', sans-serif; font-weight: 500; font-size: 40px; line-height: 1">Projects</span>
-          <svg aria-hidden="true" width="30" height="18" viewBox="0 0 22 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M1 7 H20"></path><path d="M14 1 L20 7 L14 13"></path></svg>
-        </a>
-      </div>
-      <a class="cta up" style="--d: .3s" href="/">BACK TO THE COVER</a>
+  <!-- END: résumé + next -->
+  <footer data-reveal="foot" class="{{rv.foot}}" style="padding: 120px 56px 80px">
+    <div class="hdrtop" style="border-top: 2px solid #111111; padding-top: 36px; display: flex; justify-content: space-between; align-items: center; gap: 40px">
+      <a class="next up" style="--d: .2s" href="/projects/">
+        <span style="font-family: 'Familjen Grotesk', sans-serif; font-weight: 500; font-size: 40px; line-height: 1">See my projects</span>
+        <svg aria-hidden="true" width="30" height="18" viewBox="0 0 22 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M1 7 H20"></path><path d="M14 1 L20 7 L14 13"></path></svg>
+      </a>
+      <a class="pill2 up" style="--d: .3s" href="/assets/Saniya_Patel_Resume.pdf" target="_blank" rel="noopener">DOWNLOAD RÉSUMÉ</a>
     </div>
   </footer>
 </div>
@@ -256,34 +217,28 @@ a{color:#111111}a:hover{color:#283f73}
 class Component extends DCLogic {
   constructor(props) {
     super(props);
-    this.state = { live: false, ready: false, shown: {}, drift: {} };
-    this.onScroll = this.onScroll.bind(this);
+    this.state = { live: false, ready: false, shown: {}, li: 0 };
     this.check = this.check.bind(this);
-    this.ticking = false;
+    this.held = 0;
   }
   componentDidMount() {
     this.reduce = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
     window.addEventListener('resize', this.check);
-    window.addEventListener('scroll', this.onScroll, { passive: true });
     this.check();
     this.t1 = setTimeout(this.check, 250);
     this.t2 = setTimeout(this.check, 1200);
   }
   componentWillUnmount() {
     window.removeEventListener('resize', this.check);
-    window.removeEventListener('scroll', this.onScroll);
     if (this.io) this.io.disconnect();
     clearTimeout(this.t1); clearTimeout(this.t2);
   }
-  // On the canvas the whole frame is visible at once, so nothing should animate there.
-  // Animations arm only when the page is taller than the window, i.e. in Play / a real browser.
+  // entrances only arm when the page can scroll (Play / a real browser), never on the canvas
   check() {
     if (this.state.live) return;
     const doc = document.documentElement;
-    const canScroll = (doc.scrollHeight - (window.innerHeight || 0)) > 240;
-    if (!canScroll) return;
+    if ((doc.scrollHeight - (window.innerHeight || 0)) <= 240) return;
     this.setState({ live: true });
-    this.onScroll();
     if (this.reduce || !('IntersectionObserver' in window)) return;
     this.io = new IntersectionObserver((entries) => {
       entries.forEach((e) => {
@@ -297,25 +252,12 @@ class Component extends DCLogic {
     document.querySelectorAll('[data-reveal]').forEach((el) => this.io.observe(el));
     this.setState({ ready: true });
   }
-  onScroll() {
-    if (this.ticking || this.reduce) return;
-    this.ticking = true;
-    window.requestAnimationFrame(() => {
-      this.ticking = false;
-      const vh = window.innerHeight || 900;
-      const el = document.querySelector('[data-reveal="story"]');
-      let mark = 0;
-      if (el) { const r = el.getBoundingClientRect(); mark = Math.max(-50, Math.min(50, Math.round((r.top + r.height / 2 - vh / 2) * -0.1))); }
-      this.setState({ drift: { mark: mark } });
-    });
-  }
   renderVals() {
-    const { live, ready, shown, drift } = this.state;
+    const { live, ready, shown } = this.state;
     const cls = (k) => (!ready ? '' : (shown[k] ? 'reveal in' : 'reveal'));
     return {
       heroCls: live ? 'go' : '',
-      rv: { story: cls('story'), work: cls('work'), clock: cls('clock'), lens: cls('lens'), foot: cls('foot') },
-      drift: { mark: ((drift && drift.mark) || 0) + 'px' }
+      rv: { work: cls('work'), lens: cls('lens'), foot: cls('foot') }
     };
   }
 }

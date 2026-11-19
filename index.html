@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-kind="desktop" data-alt="/m/" data-fixed>
+<html lang="en" data-kind="desktop" data-alt="/m/">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,10 +21,10 @@ else{z=Math.min(x/390,1.35)}
 d.style.zoom=z===1?'':String(z);window.__z=z}
 fit();window.addEventListener('resize',fit)})();</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&amp;family=Playfair+Display:ital,wght@0,500;0,600;1,500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&amp;family=Familjen+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&amp;family=Playfair+Display:ital,wght@1,500&amp;display=swap" rel="stylesheet">
 <style>
 @font-face{font-family:'Thorny Rock';src:url(/assets/1cd9772c3e3c.woff2) format('woff2');font-display:swap}
-.brush{font-family:'Thorny Rock','Playfair Display',serif;font-size:24px;line-height:1;color:#283f73}
+.brush{font-family:'Thorny Rock','Familjen Grotesk',sans-serif;font-size:24px;line-height:1;color:#283f73}
 body{margin:0}
 a{color:#111111}a:hover{color:#283f73}
 @keyframes spIn{0%{opacity:1;transform:translateX(0) scale(1)}29%{opacity:1;transform:translateX(0) scale(1)}42%{opacity:1;transform:translateX(-390px) scale(.55)}50%{opacity:0;transform:translateX(-390px) scale(.5)}100%{opacity:0;transform:translateX(-390px) scale(.5)}}
@@ -63,7 +63,7 @@ a{color:#111111}a:hover{color:#283f73}
 .reveal.in .txt{opacity:1;translate:none}
 .bar{position:fixed;left:0;right:0;top:0;z-index:40;background:rgba(248,248,249,.94);border-bottom:1px solid #dddbd7;transform:translateY(-100%);transition:transform .45s cubic-bezier(.2,.7,.2,1)}
 .bar.show{transform:none}
-.mB{position:relative;display:inline-flex;align-items:center;min-height:44px;padding:0 4px;text-decoration:none;font-family:'Playfair Display',serif;font-size:20px;color:#111111;transition:color .2s ease}
+.mB{position:relative;display:inline-flex;align-items:center;min-height:44px;padding:0 4px;text-decoration:none;font-family:'Familjen Grotesk',sans-serif;font-size:20px;color:#111111;transition:color .2s ease}
 .mB svg{position:absolute;left:-4px;bottom:2px;width:calc(100% + 8px);height:12px;overflow:visible;pointer-events:none}
 .mB path{stroke-dasharray:140;stroke-dashoffset:140;transition:stroke-dashoffset .5s cubic-bezier(.65,0,.25,1)}
 .mB:hover{color:#283f73}
@@ -91,126 +91,153 @@ a{color:#111111}a:hover{color:#283f73}
 .story-link:hover{color:#283f73;border-color:#283f73}
 .story-link svg{transition:transform .2s ease}
 .story-link:hover svg{transform:translateX(5px)}
+
+/* ---- Home v2 ---- */
+.topbar{position:sticky;top:0;z-index:40;height:72px;box-sizing:border-box;padding:0 56px;display:flex;justify-content:space-between;align-items:center;background:rgba(248,248,249,.92);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid #dddbd7;font-family:'Inter Tight',sans-serif}
+.wm{display:block;-webkit-mask-image:linear-gradient(90deg,#000 0 42%,transparent 58% 100%);mask-image:linear-gradient(90deg,#000 0 42%,transparent 58% 100%);-webkit-mask-size:260% 100%;mask-size:260% 100%;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-position:0 0;mask-position:0 0;animation:writeOn 2s cubic-bezier(.45,.05,.3,1) .25s both}
+.hportrait{animation:heroRise 1.1s cubic-bezier(.2,.7,.2,1) .5s both}
+@keyframes heroRise{from{opacity:0;translate:0 30px}to{opacity:1;translate:none}}
+.cue{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:10px;transition:opacity .4s ease;z-index:2}
+.cueline{display:block;width:2px;height:44px;background:linear-gradient(#283f73,#283f73) 0 0/2px 0 no-repeat,#c8d3ea;animation:cue 1.8s cubic-bezier(.65,0,.35,1) infinite}
+@keyframes cue{0%{background-size:2px 0;background-position:0 0}50%{background-size:2px 100%;background-position:0 0}100%{background-size:2px 0;background-position:0 100%}}
+.ink .w{color:#111111;opacity:clamp(.14,calc((var(--p) * 1.12 - var(--i)) * 14 + .14),1);transition:opacity .15s linear}
+.ink .w.em{color:#283f73;font-style:italic}
+.ink .sent{display:block;text-wrap:balance}
+.ink .kw{position:relative;display:inline-block;transition:transform .35s cubic-bezier(.2,.7,.2,1),opacity .15s linear;cursor:default}
+.ink .kw .ul{position:absolute;left:-2%;bottom:-.06em;width:104%;height:.26em;overflow:visible;pointer-events:none}
+.ink .kw .ul path{fill:none;stroke:#283f73;stroke-width:2.6;stroke-linecap:round;stroke-dasharray:100;stroke-dashoffset:calc((1 - clamp(0, (var(--p) * 1.12 - var(--i) - .03) * 9, 1)) * 100px);stroke-opacity:clamp(0, (var(--p) * 1.12 - var(--i) - .03) * 60, 1);transition:stroke-width .3s ease}
+.ink .kw:hover{transform:translateY(-4px)}
+.ink .kw:hover .ul path{stroke-width:4}
+.facts{display:flex;align-items:flex-end;justify-content:space-between;gap:40px;padding:22px 0 0;transition:opacity .4s ease}
+.tex{background:#f8f8f9!important}
+.meetbrush{display:inline-block;padding:.12em .22em;margin:-.12em -.22em;font-family:'Thorny Rock','Familjen Grotesk',sans-serif;line-height:1;color:#283f73;-webkit-mask-image:linear-gradient(90deg,#000 calc(var(--bw) * 118% - 18%),transparent calc(var(--bw) * 118%));mask-image:linear-gradient(90deg,#000 calc(var(--bw) * 118% - 18%),transparent calc(var(--bw) * 118%))}
+.facts{border-top:2px solid #111111}
+#work .unveil{transition:transform .5s cubic-bezier(.2,.7,.2,1),box-shadow .5s ease}
+#work .unveil:hover{transform:translateY(-6px);box-shadow:0 34px 70px rgba(17,17,17,.22)!important}
+.hero h1,.hportrait,#about-me .ink{z-index:1}
+.cue{z-index:2}
+.meet{z-index:1}
+#work{z-index:1}
+.fstage{position:relative;height:120px;flex:1;overflow:hidden}
+.fact{position:absolute;left:0;right:0;top:0;display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px;transition:opacity .55s ease,transform .6s cubic-bezier(.2,.7,.2,1)}
+.fval{font-family:'Familjen Grotesk',sans-serif;font-weight:400;font-size:40px;line-height:1.05;color:#111111}
+.ticks{display:flex;gap:8px;padding-bottom:12px}
+.tick{display:block;width:40px;height:4px;transition:background-color .25s ease}
+.hportrait img{transition:transform .25s ease-out}
+
+.tlink{color:inherit;text-decoration:none;background:linear-gradient(#283f73,#283f73) 0 100%/0 2px no-repeat;transition:background-size .35s cubic-bezier(.2,.7,.2,1),color .2s ease}
+.tlink:hover,.tlink:focus-visible{color:#283f73;background-size:100% 2px;outline:none}
+.tarrow{display:inline-block;margin-left:14px;font-size:28px;opacity:0;transform:translateX(-8px);transition:opacity .25s ease,transform .25s ease;vertical-align:middle}
+.tlink:hover .tarrow,.tlink:focus-visible .tarrow{opacity:1;transform:none}
+.mail{display:inline-flex;align-items:center;gap:12px;min-height:44px;text-decoration:none;color:#111111;font-family:'Familjen Grotesk',sans-serif;font-size:28px;border-bottom:2px solid #111111;transition:color .2s ease,border-color .2s ease,gap .25s ease}
+.alllink{display:inline-flex;align-items:center;min-height:48px;padding:0 34px;border-radius:999px;background:#111111;color:#f8f8f9;text-decoration:none;font-family:'Inter Tight',sans-serif;font-size:14px;font-weight:600;letter-spacing:3px;transition:background-color .25s ease,transform .25s ease}
+.alllink:hover,.alllink:focus-visible{background:#283f73;color:#f8f8f9;transform:translateY(-2px);outline:none}
+.mail:hover,.mail:focus-visible{color:#283f73;border-color:#283f73;gap:18px;outline:none}
+@media (prefers-reduced-motion: reduce){.wm,.hportrait,.cueline{animation:none}.ink .w{opacity:1}}
+
+@property --r{syntax:'<length>';inherits:false;initial-value:0px}
+.intro{position:fixed;inset:0;z-index:300;cursor:pointer}
+.intro.board{position:absolute;inset:auto;left:0;top:0;width:100%;height:952px}
+.iveil{position:absolute;inset:0;background:#f8f8f9;animation:ivOut .6s ease 5.75s forwards}
+@keyframes ivOut{to{opacity:0}}
+.istage{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;animation:isOut .5s ease 2.85s forwards}
+@keyframes isOut{to{opacity:0;visibility:hidden}}
+.ibig{position:absolute;left:50%;top:calc(50% - 96px);height:150px;width:auto;margin:0 0 0 -47px;opacity:0;scale:2.6;animation:bigIn .55s cubic-bezier(.5,0,.2,1) 2.85s forwards,bigShrink .45s cubic-bezier(.65,0,.25,1) 3.4s forwards,bigLeft 1.5s cubic-bezier(.45,.05,.3,1) 3.6s forwards,bigOut .4s ease 5.1s forwards}
+@keyframes bigIn{from{opacity:1;translate:var(--fx,0px) var(--fy,0px);scale:var(--fs,.3)}to{opacity:1;translate:0 0;scale:2.6}}
+@keyframes bigShrink{to{scale:1}}
+@keyframes bigLeft{from{translate:0 0}to{translate:-497px 0}}
+@keyframes bigOut{from{opacity:1;scale:1}to{opacity:0;scale:.85}}
+.iname{position:absolute;left:50%;top:calc(50% - 104px);width:860px;margin-left:-430px;animation:iLift 1s cubic-bezier(.65,0,.25,1) 5.3s forwards}
+.iname .iw{clip-path:inset(0 0 0 57.8%);animation:unrollL 1.5s cubic-bezier(.45,.05,.3,1) 3.6s forwards}
+.iname .iw2{clip-path:inset(0 42.2% 0 0);animation:unrollR .7s cubic-bezier(.45,.05,.3,1) 3.6s forwards}
+.iname img{display:block;width:860px;max-width:none;height:auto}
+@keyframes unrollL{to{clip-path:inset(0 0 0 0)}}
+@keyframes unrollR{0%{clip-path:inset(0 42.2% 0 0)}100%{clip-path:inset(0 0 0 0)}}
+@keyframes iLift{to{top:106px}}
+.ipod{position:relative;height:min(78vh,700px);aspect-ratio:1080 / 1350;-webkit-mask-image:radial-gradient(ellipse 50% 49% at 50% 49%,#000 68%,transparent 100%);mask-image:radial-gradient(ellipse 50% 49% at 50% 49%,#000 68%,transparent 100%);animation:ipIn .9s ease both}
+@keyframes ipIn{from{opacity:0}to{opacity:1}}
+.ipod img{position:absolute;inset:0;width:100%;height:100%;display:block}
+.ipod svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.ihub{position:absolute;width:1px;height:1px}
+.iring{fill:none;stroke:#283f73;stroke-width:7;stroke-linecap:round;stroke-dasharray:1043;stroke-dashoffset:1043;transform:rotate(-90deg);transform-box:fill-box;transform-origin:center;animation:ring 1.6s cubic-bezier(.45,.05,.3,1) .75s forwards}
+@keyframes ring{to{stroke-dashoffset:0}}
+.ipress{fill:#283f73;opacity:0;transform-box:fill-box;transform-origin:center;animation:press .5s ease .45s both}
+@keyframes press{0%{opacity:0;transform:scale(1)}40%{opacity:.22;transform:scale(.94)}100%{opacity:0;transform:scale(1)}}
+.iwave{fill:none;stroke:#283f73;stroke-width:2;opacity:0;transform-box:fill-box;transform-origin:center;animation:wave 1.4s cubic-bezier(.2,.7,.2,1) .55s both}
+@keyframes wave{0%{opacity:.6;transform:scale(1)}100%{opacity:0;transform:scale(1.95)}}
+.idisc{fill:#f8f8f9;transform-box:fill-box;transform-origin:center;transform:scale(0);animation:disc .55s cubic-bezier(.2,.7,.2,1) 2.3s forwards}
+@keyframes disc{to{transform:scale(1)}}
+.ilogo{opacity:0;animation:ipIn .4s ease 2.5s forwards}
+.icap{display:flex;flex-direction:column;align-items:center;gap:6px;animation:ipIn .8s ease .5s both}
+.icap .np{font-family:'Inter Tight',sans-serif;font-size:14px;font-weight:600;letter-spacing:4px;color:#283f73}
+.icap .tt{font-family:'Familjen Grotesk',sans-serif;font-style:italic;font-size:20px;color:#111111}
+.ieq{display:inline-flex;gap:3px;align-items:flex-end;height:12px;margin-right:10px;vertical-align:-1px}
+.ieq i{display:block;width:3px;background:#283f73;animation:eq .9s ease-in-out infinite}
+.ieq i:nth-child(2){animation-delay:-.3s}.ieq i:nth-child(3){animation-delay:-.6s}
+@keyframes eq{0%,100%{height:3px}50%{height:12px}}
+.irun .wm{animation:none!important;opacity:0}
+.iplayed .wm{animation:none!important}
+@media (prefers-reduced-motion: reduce){.intro{display:none}}
 </style>
 <link rel="stylesheet" href="/assets/site.css">
 </head>
 <body>
 <div id="dc-root"></div>
 <script type="text/html" id="dc-tpl">
-<div style="width: 1280px; background: #f8f8f9">
-<!-- contents bar: follows you once the cover has scrolled away -->
-<nav aria-label="Sections" class="bar {{barCls}}">
-  <div style="width: 1280px; box-sizing: border-box; padding: 0 56px; height: 68px; display: flex; justify-content: space-between; align-items: center; font-family: 'Inter Tight', sans-serif">
-    <div style="display: flex; align-items: center; gap: 14px">
-      <img src="/assets/7fbc09757fa4.png" alt="SP monogram" style="height: 30px; width: auto">
-      <span style="font-size: 14px; font-weight: 600; letter-spacing: 3px; color: #4a4a4f">VOL. 01 · FALL 2026</span>
+<div class="{{goCls}} tex" style="width: 1280px; background: #f8f8f9; font-family: 'Inter Tight', sans-serif; color: #111111">
+  <sc-if value="{{introOn}}" hint-placeholder-val="{{ false }}">
+  <div class="intro {{intro.m}}" onClick="{{skipIntro}}" aria-hidden="true">
+    <div class="iveil"></div>
+    <div class="istage">
+    <div class="ipod">
+      <img src="/assets/ae39fa58d79f.jpg" alt="">
+      <span class="ihub" style="left: 50.602%; top: 48.333%"></span>
+      <svg viewBox="0 0 1080 1350">
+        <circle class="iwave" cx="546.5" cy="652.5" r="107"></circle>
+        <circle class="ipress" cx="546.5" cy="652.5" r="107"></circle>
+        <circle class="iring" cx="546.5" cy="652.5" r="166"></circle>
+        <circle class="idisc" cx="546.5" cy="652.5" r="107"></circle>
+        <image class="ilogo" href="/assets/7fbc09757fa4.png" x="502.5" y="608.5" width="88" height="88" preserveAspectRatio="xMidYMid meet"></image>
+      </svg>
     </div>
+    <div class="icap"><span class="np"><span class="ieq"><i></i><i></i><i></i></span>NOW PLAYING</span></div>
+    </div>
+    <div class="iname"><div class="iw"><div class="iw2"><img src="/assets/25a564d6863f.png" alt=""></div></div></div>
+    <img class="ibig" src="/assets/7fbc09757fa4.png" alt="" style="--fx: {{ib.x}}; --fy: {{ib.y}}; --fs: {{ib.s}}">
+  </div>
+  </sc-if>
+  <nav aria-label="Main" class="topbar">
+    <a href="/" aria-label="Home" style="display: flex; align-items: center; min-height: 44px"><img src="/assets/7fbc09757fa4.png" alt="" style="height: 30px; width: auto"></a>
     <div style="display: flex; gap: 40px">
       <a class="mB on" href="/" aria-current="page">Home<svg aria-hidden="true" viewBox="0 0 100 12" preserveAspectRatio="none"><path d="M2 8 C25 3 60 4 98 6 M70 10 L96 9" fill="none" stroke="#283f73" stroke-width="2.4" stroke-linecap="round"></path></svg></a>
       <a class="mB" href="/about/">About<svg aria-hidden="true" viewBox="0 0 100 12" preserveAspectRatio="none"><path d="M2 8 C25 3 60 4 98 6 M70 10 L96 9" fill="none" stroke="#283f73" stroke-width="2.4" stroke-linecap="round"></path></svg></a>
       <a class="mB" href="/projects/">Projects<svg aria-hidden="true" viewBox="0 0 100 12" preserveAspectRatio="none"><path d="M2 8 C25 3 60 4 98 6 M70 10 L96 9" fill="none" stroke="#283f73" stroke-width="2.4" stroke-linecap="round"></path></svg></a>
       <a class="mB" href="/contact/">Contact<svg aria-hidden="true" viewBox="0 0 100 12" preserveAspectRatio="none"><path d="M2 8 C25 3 60 4 98 6 M70 10 L96 9" fill="none" stroke="#283f73" stroke-width="2.4" stroke-linecap="round"></path></svg></a>
     </div>
-  </div>
-</nav>
-<!-- SCENE: cover stays pinned while it opens up into the first project -->
-<div id="scene" style="position: relative; height: {{sceneH}}">
-<div style="position: sticky; top: 0; width: 1280px; height: 840px; box-sizing: border-box; background: #f8f8f9; font-family: 'Inter Tight', sans-serif; color: #111111; overflow: hidden; display: grid; grid-template-columns: 1fr 480px 1fr; perspective: 1600px">
+  </nav>
 
-  <!-- portrait: stays exactly as framed on the cover -->
-  <div style="position: absolute; top: 239px; height: 601px; left: 400px; width: 480px; z-index: 1; overflow: hidden">
-    <img src="/assets/4b6d535920b5.jpg" alt="Saniya Patel in a pale blue lace sundress, seated at a café table by a blue window frame" style="width: 100%; height: 100%; object-fit: cover; object-position: 60% 20%; display: block">
-  </div>
-
-  <!-- left: contents -->
-  <div class="{{riseCls}}" style="transform-origin: 0 50%; transform: {{open.left}}; opacity: {{open.fade}}; grid-column: 1; grid-row: 1; padding: 314px 0 40px 56px; display: flex; flex-direction: column; justify-content: space-between; z-index: 2">
-    <nav aria-label="Main" style="display: flex; flex-direction: column; width: 300px">
-      <div style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 2px solid #111111; padding-bottom: 8px; margin-bottom: 4px"><span style="font-size: 14px; font-weight: 600; letter-spacing: 3px">CONTENTS</span><span class="brush write-load" style="--wd: .5s; --wdur: 1.1s">this issue</span></div>
-      <a class="navrow" href="#work" style="display: flex; align-items: center; gap: 14px; padding: 12px 4px; min-height: 44px; text-decoration: none; border-bottom: 1px solid #dddbd7;">
-        <span style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 15px; color: #283f73; width: 26px">01</span>
-        <span style="flex: 1; font-family: 'Playfair Display', serif; font-style: normal; font-size: 30px; font-weight: 500; line-height: 1; letter-spacing: -0.2px">Work</span>
-        <svg class="navarrow" aria-hidden="true" width="22" height="14" viewBox="0 0 22 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M1 7 H20"></path><path d="M14 1 L20 7 L14 13"></path></svg>
-      </a>
-      <a class="navrow aboutrow" href="/about/" style="display: flex; align-items: center; gap: 14px; padding: 12px 4px; min-height: 44px; text-decoration: none; border-bottom: 1px solid #dddbd7;">
-        <span style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 15px; color: #283f73; width: 26px">02</span>
-        <span style="flex: 1; font-family: 'Playfair Display', serif; font-style: normal; font-size: 30px; font-weight: 500; line-height: 1; letter-spacing: -0.2px">About</span>
-        <svg class="navarrow" aria-hidden="true" width="22" height="14" viewBox="0 0 22 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M1 7 H20"></path><path d="M14 1 L20 7 L14 13"></path></svg>
-      </a>
-      <a class="navrow" href="/projects/" style="display: flex; align-items: center; gap: 14px; padding: 12px 4px; min-height: 44px; text-decoration: none; border-bottom: 1px solid #dddbd7;">
-        <span style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 15px; color: #283f73; width: 26px">03</span>
-        <span style="flex: 1; font-family: 'Playfair Display', serif; font-style: normal; font-size: 30px; font-weight: 500; line-height: 1; letter-spacing: -0.2px">Projects</span>
-        <svg class="navarrow" aria-hidden="true" width="22" height="14" viewBox="0 0 22 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M1 7 H20"></path><path d="M14 1 L20 7 L14 13"></path></svg>
-      </a>
-      <a class="navrow" href="/contact/" style="display: flex; align-items: center; gap: 14px; padding: 12px 4px; min-height: 44px; text-decoration: none;">
-        <span style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 15px; color: #283f73; width: 26px">04</span>
-        <span style="flex: 1; font-family: 'Playfair Display', serif; font-style: italic; font-size: 30px; font-weight: 500; line-height: 1; letter-spacing: -0.2px">Contact</span>
-        <svg class="navarrow" aria-hidden="true" width="22" height="14" viewBox="0 0 22 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M1 7 H20"></path><path d="M14 1 L20 7 L14 13"></path></svg>
-      </a>
-    </nav>
-    <div style="display: flex; align-items: center; gap: 14px">
-      <img src="/assets/7fbc09757fa4.png" alt="SP monogram" style="height: 40px; width: auto">
-      <span style="font-size: 14px; font-weight: 600; letter-spacing: 3px; color: #4a4a4f">VOL. 01 · FALL 2026</span>
+  <!-- HERO: just my name and the portrait -->
+  <header class="hero" style="position: relative; height: 880px; overflow: hidden">
+    
+    <h1 style="margin: 0; position: absolute; left: 0; right: 0; top: 34px; display: flex; justify-content: center; z-index: 2"><img class="wm" src="/assets/25a564d6863f.png" alt="Saniya Patel" style="width: 860px; height: auto"></h1>
+    <div class="hportrait" style="position: absolute; left: 50%; top: 168px; width: 420px; height: 560px; margin-left: -210px; transform: translateY({{hero.shift}}); z-index: 1">
+      <img src="/assets/4b6d535920b5.jpg" alt="Saniya at a café table by a blue window" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: 60% 20%; box-shadow: 0 30px 70px rgba(17,17,17,.18)">
     </div>
-  </div>
+    <div class="cue" aria-hidden="true" style="opacity: {{hero.cue}}"><span style="font-size: 14px; font-weight: 600; letter-spacing: 3px; color: #4a4a4f">SCROLL</span><span class="cueline"></span></div>
+  </header>
 
-
-  <!-- right: cover story -->
-  <div class="{{riseCls}}" style="transform-origin: 100% 50%; transform: {{open.right}}; opacity: {{open.fade}}; grid-column: 3; grid-row: 1; padding: 314px 56px 40px 44px; display: flex; flex-direction: column; justify-content: space-between; align-items: flex-end; z-index: 2">
-    <div style="display: flex; flex-direction: column; gap: 18px; width: 300px">
-      <div style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 2px solid #111111; padding-bottom: 8px"><span style="font-size: 14px; font-weight: 600; letter-spacing: 3px">THE COVER STORY</span></div>
-      <h2 style="margin: 0; font-family: 'Playfair Display', serif; font-weight: 600; font-size: 40px; line-height: 1.05; color: #283f73"><span style="white-space: nowrap">Where design,</span><br><span style="white-space: nowrap">technology, <span style="font-style: italic">&amp;</span></span><br><span style="white-space: nowrap">business meet</span></h2>
-      <p style="margin: 0; font-size: 17px; line-height: 1.5; color: #3a3a3f"><span style="white-space: nowrap">Innovator in Los Angeles at the</span><br><span style="white-space: nowrap">USC Iovine and Young Academy.</span></p>
-      <a class="pillbtn" href="#work" style="align-self: flex-start; display: inline-flex; align-items: center; min-height: 44px; padding: 0 26px; border-radius: 999px; background: #111111; color: #f8f8f9; text-decoration: none; font-size: 14px; font-weight: 600; letter-spacing: 3px; margin-top: 4px">VIEW THE WORK</a>
-    </div>
-    <div style="display: flex; justify-content: space-between; align-items: flex-end; width: 300px">
-      <button class="replay" onClick="{{replay}}" aria-label="Replay intro" title="Replay intro"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7"></path><path d="M3 4v5h5"></path></svg></button>
-      <a class="resume" href="/assets/Saniya_Patel_Resume.pdf" target="_blank" rel="noopener" aria-label="Download résumé" title="Download résumé" style="background: #ffffff; padding: 8px 8px 6px; display: flex; flex-direction: column; gap: 4px; align-items: center; text-decoration: none">
-        <div style="display: flex; gap: 2px; height: 46px"><span style="width: 3px; background: #111111"></span><span style="width: 1px; background: #111111"></span><span style="width: 2px; background: #111111"></span><span style="width: 1px; background: #111111"></span><span style="width: 4px; background: #111111"></span><span style="width: 1px; background: #111111"></span><span style="width: 1px; background: #111111"></span><span style="width: 3px; background: #111111"></span><span style="width: 2px; background: #111111"></span><span style="width: 1px; background: #111111"></span><span style="width: 3px; background: #111111"></span><span style="width: 1px; background: #111111"></span><span style="width: 2px; background: #111111"></span><span style="width: 4px; background: #111111"></span><span style="width: 1px; background: #111111"></span><span style="width: 2px; background: #111111"></span><span style="width: 1px; background: #111111"></span><span style="width: 3px; background: #111111"></span><span style="width: 1px; background: #111111"></span><span style="width: 2px; background: #111111"></span><span style="width: 1px; background: #111111"></span><span style="width: 4px; background: #111111"></span><span style="width: 2px; background: #111111"></span><span style="width: 1px; background: #111111"></span></div>
-        <span style="font-size: 14px; font-weight: 600; letter-spacing: 3px; color: #111111">RÉSUMÉ ↓</span>
-      </a>
-    </div>
-  </div>
-
-
-  <!-- section band: rises at the end of the scene -->
-  <div style="position: absolute; left: 0; right: 0; bottom: 0; height: 72px; z-index: 5; background: #f8f8f9; padding: 0 56px; box-sizing: border-box; display: flex; align-items: flex-end; padding-bottom: 14px; transform: translateY({{band.y}}); opacity: {{band.o}}">
-    <div style="flex: 1; display: flex; justify-content: space-between; align-items: baseline; padding-bottom: 10px; background: linear-gradient(#111111,#111111) left bottom / {{band.rule}} 2px no-repeat">
-      <h2 style="margin: 0; font-size: 14px; font-weight: 600; letter-spacing: 3px">THE WORK</h2>
-      <span class="brush" style="-webkit-mask-position: {{band.write}} 0; mask-position: {{band.write}} 0">three featured stories</span>
-    </div>
-  </div>
-
-  <!-- intro + masthead: remounted on replay; skipped after first visit -->
-  <sc-if value="{{introEven}}" hint-placeholder-val="{{ false }}">
-    <div class="veil" style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; background: #f8f8f9; display: flex; align-items: center; justify-content: center; z-index: 10">
-      <img class="mono" src="/assets/7fbc09757fa4.png" alt="" style="height: 280px; width: auto">
-      <button class="skip" onClick="{{skip}}">Skip intro</button>
-    </div>
-    <div class="liftup" style="position: absolute; left: 190px; top: 56px; width: 900px; height: 217px; z-index: 11">
-      <div class="write" style="height: 217px; overflow: hidden">
-        <img src="/assets/25a564d6863f.png" alt="saniya patel" style="display: block; width: 900px; max-width: none; height: auto">
+  <!-- WHO I AM: this part holds still while you scroll; the words ink in, then my basics take turns -->
+  <section id="about-me" data-reveal="ab" class="{{rv.ab}}" aria-label="About me" style="position: relative; height: 1560px">
+    <div class="meet" style="position: sticky; top: 72px; height: 720px; box-sizing: border-box; padding: 88px 56px 0; display: flex; flex-direction: column; justify-content: flex-start; gap: 48px">
+      <span class="meetbrush" style="--bw: {{bw.v}}; font-size: 60px; align-self: center">nice to meet you</span>
+      <p class="ink" style="--p: {{about.p}}; margin: 0 auto; max-width: 900px; text-align: center; font-family: 'Familjen Grotesk', sans-serif; font-weight: 400; font-size: 46px; line-height: 1.22; letter-spacing: -0.2px; display: flex; flex-direction: column; gap: 26px"><span class="sent"><span class="w" style="--i: 0.0000">I’m</span> <span class="w" style="--i: 0.0435">Saniya,</span> <span class="w" style="--i: 0.0870">a</span> <span class="w" style="--i: 0.1304">student</span> <span class="w" style="--i: 0.1739">at</span> <span class="w" style="--i: 0.2174">the</span> <span class="w" style="--i: 0.2609">USC</span> <span class="w" style="--i: 0.3043">Iovine</span> <span class="w" style="--i: 0.3478">and</span> <span class="w" style="--i: 0.3913">Young</span> <span class="w" style="--i: 0.4348">Academy.</span></span><span class="sent"><span class="w" style="--i: 0.4783">I</span> <span class="w" style="--i: 0.5217">like</span> <span class="w" style="--i: 0.5652">constructing</span> <span class="w" style="--i: 0.6087">ideas</span> <span class="w" style="--i: 0.6522">in</span> <span class="w" style="--i: 0.6957">spaces</span> <span class="w" style="--i: 0.7391">where</span> <span class="w em kw" style="--i: 0.7826"><span class="kwt">design</span>,<svg class="ul" aria-hidden="true" viewBox="0 0 100 10" preserveAspectRatio="none"><path pathLength="100" d="M2 6 C 22 2, 48 8, 70 4 S 92 5, 98 3"></path></svg></span> <span class="w em kw" style="--i: 0.8261"><span class="kwt">technology</span><svg class="ul" aria-hidden="true" viewBox="0 0 100 10" preserveAspectRatio="none"><path pathLength="100" d="M2 6 C 22 2, 48 8, 70 4 S 92 5, 98 3"></path></svg></span> <span class="w em" style="--i: 0.8696">&</span> <span class="w em kw" style="--i: 0.9130"><span class="kwt">business</span><svg class="ul" aria-hidden="true" viewBox="0 0 100 10" preserveAspectRatio="none"><path pathLength="100" d="M2 6 C 22 2, 48 8, 70 4 S 92 5, 98 3"></path></svg></span> <span class="w" style="--i: 0.9565">meet.</span></span></p>
+      <div class="facts" style="opacity: {{fx.show}}">
+        <div class="fstage"><div class="fact" style="opacity: {{fx.o0}}; transform: translateY({{fx.y0}})"><span style="font-size: 14px; font-weight: 600; letter-spacing: 3px; color: #283f73">BASED IN</span><span class="fval">Los Angeles</span></div><div class="fact" style="opacity: {{fx.o1}}; transform: translateY({{fx.y1}})"><span style="font-size: 14px; font-weight: 600; letter-spacing: 3px; color: #283f73">CURRENTLY</span><span class="fval">Looking for design roles</span></div><div class="fact" style="opacity: {{fx.o2}}; transform: translateY({{fx.y2}})"><span style="font-size: 14px; font-weight: 600; letter-spacing: 3px; color: #283f73">STUDYING</span><span class="fval">Finance and design</span></div><div class="fact" style="opacity: {{fx.o3}}; transform: translateY({{fx.y3}})"><span style="font-size: 14px; font-weight: 600; letter-spacing: 3px; color: #283f73">FUELED BY</span><span class="fval">Pumpkin spice latte</span></div><div class="fact" style="opacity: {{fx.o4}}; transform: translateY({{fx.y4}})"><span style="font-size: 14px; font-weight: 600; letter-spacing: 3px; color: #283f73">FUN FACT</span><span class="fval">Traveled to 30+ countries</span></div></div>
       </div>
     </div>
-  </sc-if>
-  <sc-if value="{{introOdd}}" hint-placeholder-val="{{ false }}">
-    <div class="veil" style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; background: #f8f8f9; display: flex; align-items: center; justify-content: center; z-index: 10">
-      <img class="mono" src="/assets/7fbc09757fa4.png" alt="" style="height: 280px; width: auto">
-      <button class="skip" onClick="{{skip}}">Skip intro</button>
-    </div>
-    <div class="liftup" style="position: absolute; left: 190px; top: 56px; width: 900px; height: 217px; z-index: 11">
-      <div class="write" style="height: 217px; overflow: hidden">
-        <img src="/assets/25a564d6863f.png" alt="saniya patel" style="display: block; width: 900px; max-width: none; height: auto">
-      </div>
-    </div>
-  </sc-if>
-  <sc-if value="{{skipped}}" hint-placeholder-val="{{ true }}">
-    <div style="position: absolute; left: 190px; top: 56px; width: 900px; height: 217px; z-index: 11">
-      <img src="/assets/25a564d6863f.png" alt="saniya patel" style="display: block; width: 900px; max-width: none; height: auto">
-    </div>
-  </sc-if>
-</div>
-</div>
-<section id="work" aria-label="Featured stories" style="position: relative; width: 1280px; box-sizing: border-box; background: #f8f8f9; font-family: 'Inter Tight', sans-serif; color: #111111; padding: 72px 56px 104px">
+  </section>
+
+  <section id="work" aria-label="Featured stories" style="position: relative; width: 100%; box-sizing: border-box; background: transparent; font-family: 'Inter Tight', sans-serif; color: #111111; padding: 72px 56px 104px">
 
   <!-- brush stroke: paints itself as you scroll, underlining each project title -->
   <svg aria-hidden="true" width="1280" height="{{brush.h}}" viewBox="0 0 1280 {{brush.h}}" style="position: absolute; left: 0; top: 0; z-index: 0; pointer-events: none; overflow: visible">
@@ -219,39 +246,34 @@ a{color:#111111}a:hover{color:#283f73}
   </svg>
 
   <div style="position: relative; z-index: 1; display: flex; flex-direction: column; gap: 140px">
-  <sc-if value="{{showHdr}}" hint-placeholder-val="{{ true }}">
-    <header style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 2px solid #111111; padding-bottom: 10px; margin-bottom: -84px">
-      <h2 style="margin: 0; font-size: 14px; font-weight: 600; letter-spacing: 3px">THE WORK</h2>
-      <span class="brush write-load" style="--wd: .6s; --wdur: 1.2s">three featured stories</span>
+  <header style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 2px solid #111111; padding-bottom: 10px; margin-bottom: -84px">
+      <h2 style="margin: 0; font-size: 14px; font-weight: 600; letter-spacing: 3px">THREE FEATURED PROJECTS</h2>
     </header>
-  </sc-if>
 
   <!-- STORY 01: image left, text right -->
   <article data-reveal="s1" class="{{rv.s1}}" style="position: relative; z-index: 1; display: grid; grid-template-columns: 7fr 5fr; gap: 56px; align-items: center">
-    <span class="bignum" aria-hidden="true" style="right: 16px; top: 204px; transform: translateY({{nums.s1}})">01</span>
+    <span class="bignum" aria-hidden="true" style="right: 16px; top: 50%; transform: translateY(-22%)">01</span>
     <a class="unveil" href="/work/spotify/" aria-label="Open Spotify" style="display: block; box-shadow: 0 24px 60px rgba(17,17,17,.18)"><video src="/assets/19a6c5753047.mp4" poster="/assets/fa6009d3fad1.jpg" autoplay muted loop playsinline preload="auto" aria-label="Pizza Jam prototype walkthrough" style="display: block; width: 100%; aspect-ratio: 1600 / 843; object-fit: cover; background: #1f2a40"></video></a>
     <div class="txt" style="display: flex; flex-direction: column; gap: 22px">
       <div style="display: flex; align-items: baseline; gap: 14px">
         <span style="font-size: 14px; font-weight: 600; letter-spacing: 3px; color: #4a4a4f">COMPANY SPRINT</span>
       </div>
-      <h3 data-title="1" style="margin: 0; font-family: 'Playfair Display', serif; font-weight: 600; font-size: 40px; line-height: 1.05">Spotify</h3>
+      <h3 data-title="1" style="margin: 0; font-family: 'Familjen Grotesk', sans-serif; font-weight: 500; font-size: 40px; line-height: 1.05"><a class="tlink" href="/work/spotify/">Spotify<span class="tarrow" aria-hidden="true">→</span></a></h3>
       <p style="margin: 0; font-size: 17px; line-height: 1.5; color: #3a3a3f; text-wrap: pretty">I designed Pizza Jam, a playlist maker that helps emerging artists reach fans of similar established artists.</p>
       <dl style="margin: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; border-top: 1px solid #dddbd7; padding-top: 16px"><div style="display: flex; flex-direction: column; gap: 4px"><dt style="font-size: 14px; font-weight: 600; letter-spacing: 3px; color: #4a4a4f">ROLE</dt><dd style="margin: 0; font-size: 15px">Designer &amp; creative direction</dd></div><div style="display: flex; flex-direction: column; gap: 4px"><dt style="font-size: 14px; font-weight: 600; letter-spacing: 3px; color: #4a4a4f">DELIVERABLE</dt><dd style="margin: 0; font-size: 15px">Six-screen working prototype</dd></div><div style="display: flex; flex-direction: column; gap: 4px"><dt style="font-size: 14px; font-weight: 600; letter-spacing: 3px; color: #4a4a4f">TOOLS</dt><dd style="margin: 0; font-size: 15px">Figma Make</dd></div></dl>
-      <a class="story-link" href="/work/spotify/">READ THE STORY <svg aria-hidden="true" width="20" height="12" viewBox="0 0 22 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 7 H20"></path><path d="M14 1 L20 7 L14 13"></path></svg></a>
     </div>
   </article>
 
   <!-- STORY 02: text left, image cluster right -->
   <article data-reveal="s2" class="{{rv.s2}}" style="position: relative; z-index: 1; display: grid; grid-template-columns: 5fr 7fr; gap: 56px; align-items: center">
-    <span class="bignum" aria-hidden="true" style="left: 64px; top: 204px; transform: translateY({{nums.s2}})">02</span>
+    <span class="bignum" aria-hidden="true" style="left: 110px; top: 50%; transform: translateY(-8%)">02</span>
     <div class="txt" style="display: flex; flex-direction: column; gap: 22px">
       <div style="display: flex; align-items: baseline; gap: 14px">
         <span style="font-size: 14px; font-weight: 600; letter-spacing: 3px; color: #4a4a4f">PITCH</span>
       </div>
-      <h3 data-title="1" style="margin: 0; font-family: 'Playfair Display', serif; font-weight: 600; font-size: 40px; line-height: 1.05">Synchora</h3>
+      <h3 data-title="1" style="margin: 0; font-family: 'Familjen Grotesk', sans-serif; font-weight: 500; font-size: 40px; line-height: 1.05"><a class="tlink" href="/work/synchora/">Synchora<span class="tarrow" aria-hidden="true">→</span></a></h3>
       <p style="margin: 0; font-size: 17px; line-height: 1.5; color: #3a3a3f; text-wrap: pretty">3D software that lets choreographers plan dancers’ movement in a space.</p>
       <dl style="margin: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; border-top: 1px solid #dddbd7; padding-top: 16px"><div style="display: flex; flex-direction: column; gap: 4px"><dt style="font-size: 14px; font-weight: 600; letter-spacing: 3px; color: #4a4a4f">ROLE</dt><dd style="margin: 0; font-size: 15px">COO &amp; CFO</dd></div><div style="display: flex; flex-direction: column; gap: 4px"><dt style="font-size: 14px; font-weight: 600; letter-spacing: 3px; color: #4a4a4f">TEAM</dt><dd style="margin: 0; font-size: 15px">Team of 6</dd></div><div style="display: flex; flex-direction: column; gap: 4px"><dt style="font-size: 14px; font-weight: 600; letter-spacing: 3px; color: #4a4a4f">DELIVERABLE</dt><dd style="margin: 0; font-size: 15px">Investor pitch deck + product demo</dd></div></dl>
-      <a class="story-link" href="/work/synchora/">READ THE STORY <svg aria-hidden="true" width="20" height="12" viewBox="0 0 22 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 7 H20"></path><path d="M14 1 L20 7 L14 13"></path></svg></a>
     </div>
     <a class="unveil" href="/work/synchora/" aria-label="Open Synchora" style="display: flex; flex-direction: column; gap: 16px; text-decoration: none">
       <span style="display: block; box-shadow: 0 24px 60px rgba(17,17,17,.18)"><video src="/assets/03dd849f8515.mp4" poster="/assets/7fd87a0a6aad.jpg" autoplay muted loop playsinline preload="auto" aria-label="Synchora product demo" style="display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; background: #1f2a40"></video></span>
@@ -261,25 +283,26 @@ a{color:#111111}a:hover{color:#283f73}
 
   <!-- STORY 03: image left, text right -->
   <article data-reveal="s3" class="{{rv.s3}}" style="position: relative; z-index: 1; display: grid; grid-template-columns: 7fr 5fr; gap: 56px; align-items: center">
-    <span class="bignum" aria-hidden="true" style="right: 0; top: 204px; transform: translateY({{nums.s3}})">03</span>
+    <span class="bignum" aria-hidden="true" style="right: 0; top: 50%; transform: translateY(-22%)">03</span>
     <a class="unveil" href="/work/arista/" aria-label="Open Arista" style="height: 520px; background: #ebe6dd; display: flex; align-items: center; justify-content: center"><img src="/assets/ce18ee446182.jpg" alt="Arista Instagram feed I designed" style="display: block; height: 440px; width: 440px; object-fit: cover; box-shadow: 0 24px 60px rgba(17,17,17,.18)"></a>
     <div class="txt" style="display: flex; flex-direction: column; gap: 22px">
       <div style="display: flex; align-items: baseline; gap: 14px">
         <span style="font-size: 14px; font-weight: 600; letter-spacing: 3px; color: #4a4a4f">ART & DESIGN</span>
       </div>
-      <h3 data-title="1" style="margin: 0; font-family: 'Playfair Display', serif; font-weight: 600; font-size: 40px; line-height: 1.05">Arista</h3>
+      <h3 data-title="1" style="margin: 0; font-family: 'Familjen Grotesk', sans-serif; font-weight: 500; font-size: 40px; line-height: 1.05"><a class="tlink" href="/work/arista/">Arista<span class="tarrow" aria-hidden="true">→</span></a></h3>
       <p style="margin: 0; font-size: 17px; line-height: 1.5; color: #3a3a3f; text-wrap: pretty">My nonprofit jewelry business. I donated over 1,000 pieces to domestic abuse survivor shelters.</p>
       <dl style="margin: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; border-top: 1px solid #dddbd7; padding-top: 16px"><div style="display: flex; flex-direction: column; gap: 4px"><dt style="font-size: 14px; font-weight: 600; letter-spacing: 3px; color: #4a4a4f">ROLE</dt><dd style="margin: 0; font-size: 15px">Founder & designer</dd></div><div style="display: flex; flex-direction: column; gap: 4px"><dt style="font-size: 14px; font-weight: 600; letter-spacing: 3px; color: #4a4a4f">DELIVERABLE</dt><dd style="margin: 0; font-size: 15px">Brand, products & Instagram</dd></div><div style="display: flex; flex-direction: column; gap: 4px"><dt style="font-size: 14px; font-weight: 600; letter-spacing: 3px; color: #4a4a4f">GIVES TO</dt><dd style="margin: 0; font-size: 15px">Survivor shelters</dd></div></dl>
-      <a class="story-link" href="/work/arista/">READ THE STORY <svg aria-hidden="true" width="20" height="12" viewBox="0 0 22 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 7 H20"></path><path d="M14 1 L20 7 L14 13"></path></svg></a>
     </div>
   </article>
 
   <!-- end of section -->
   <div data-reveal="e" class="{{rv.e}}" style="display: flex; justify-content: center; border-top: 2px solid #111111; padding-top: 40px">
-    <a class="txt pillbtn" href="/projects/" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 34px; border-radius: 999px; background: #111111; color: #f8f8f9; text-decoration: none; font-size: 14px; font-weight: 600; letter-spacing: 3px">SEE ALL WORK</a>
+    <a class="alllink" href="/projects/">SEE ALL 15 PROJECTS</a>
   </div>
   </div>
 </section>
+
+
 </div>
 </script>
 <noscript><p style="font-family:sans-serif;padding:40px">This site needs JavaScript to show its pages. Contact: <a href="mailto:saniyap@usc.edu">saniyap@usc.edu</a></p></noscript>
@@ -290,15 +313,71 @@ class Component extends DCLogic {
     super(props);
     let seen = false;
     try { seen = window.sessionStorage.getItem('sp_intro_seen') === '1'; } catch (e) {}
-    this.state = { n: 0, skipped: seen, ready: false, shown: {}, sc: {}, brushD: 'M28 0', brushH: 2400, brushLen: 0 };
+    this.state = { n: 0, skipped: true, ready: false, shown: {}, sc: {}, brushD: 'M28 0', brushH: 2400, brushLen: 0 };
     this.onScroll = this.onScroll.bind(this);
     this.buildBrush = this.buildBrush.bind(this);
     this.ticking = false;
   }
   componentDidMount() {
-    try { window.sessionStorage.setItem('sp_intro_seen', '1'); } catch (e) {}
+    
     this.reduce = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
     window.addEventListener('scroll', this.onScroll, { passive: true });
+    // opening iPod: only where the page can scroll (never on the canvas), once per visit
+    // two ways it runs: 'page' (website / Play: covers the window, once per visit on the website)
+    // and 'board' (on the canvas: covers the top of the artboard and replays every few seconds so you can watch it)
+    const onSite = document.documentElement.hasAttribute('data-kind');
+    const canScroll = () => (document.documentElement.scrollHeight - (window.innerHeight || 0)) > 240;
+    this.clearIntro = () => { clearTimeout(this.iT); clearTimeout(this.iM); clearTimeout(this.iL); document.documentElement.style.overflow = ''; };
+    this.endIntro = () => {
+      const mode = this.state.im;
+      this.clearIntro(); this.setState({ io: 'done' });
+      if (mode === 'board') this.iL = setTimeout(() => { this.setState({ io: null, ib: null }); setTimeout(() => this.startIntro('board'), 60); }, 5000);
+    };
+    this.skipIntro = () => this.endIntro();
+    this.startIntro = (mode) => {
+      if (this.reduce || this.state.io === 'run') return;
+      if (mode === 'page') {
+        if (onSite) { let seen = false; try { seen = window.sessionStorage.getItem('sp_ipod_seen') === '1'; } catch (e) {} if (seen) return; try { window.sessionStorage.setItem('sp_ipod_seen', '1'); } catch (e) {} }
+        window.scrollTo(0, 0); document.documentElement.style.overflow = 'hidden';
+      }
+      this.setState({ io: 'run', im: mode, ib: null });
+      this.iT = setTimeout(this.endIntro, 6450);
+      this.iM = setTimeout(() => {
+        const sm = document.querySelector('.ilogo'), bg = document.querySelector('.ibig'), box = document.querySelector('.intro');
+        if (!sm || !bg || !box) return;
+        const z = box.getBoundingClientRect().width / Math.max(1, box.offsetWidth);
+        const a = sm.getBoundingClientRect(), b = bg.getBoundingClientRect();
+        const dx = (a.left + a.width / 2 - (b.left + b.width / 2)) / z, dy = (a.top + a.height / 2 - (b.top + b.height / 2)) / z;
+        this.setState({ ib: { x: dx.toFixed(1) + 'px', y: dy.toFixed(1) + 'px', s: (a.height / (150 * z)).toFixed(3) } });
+      }, 2450);
+    };
+    setTimeout(() => { if (canScroll()) this.startIntro('page'); else if (!onSite) this.startIntro('board'); }, 60);
+    // the canvas reuses this frame when you open it full-window (Play): switch modes when its size changes
+    this.onIntroResize = () => {
+      const want = canScroll() ? 'page' : (onSite ? null : 'board');
+      if (!want || want === this.state.im) return;
+      this.clearIntro(); this.setState({ io: null, ib: null, im: null });
+      setTimeout(() => this.startIntro(want), 60);
+    };
+    window.addEventListener('resize', this.onIntroResize);
+    this.onMove = (e) => {
+      if (this.reduce) return;
+      const el = document.querySelector('.hportrait'); if (!el) return;
+      const r = el.getBoundingClientRect(); if (!r.width) return;
+      const tx = Math.max(-1, Math.min(1, (e.clientY - (r.top + r.height / 2)) / (r.height * 0.9)));
+      const ty = Math.max(-1, Math.min(1, (e.clientX - (r.left + r.width / 2)) / (r.width * 1.6)));
+      const hero = document.querySelector('.hero');
+      let cross = { x: 640, y: 440, o: 0 };
+      if (hero) { const h = hero.getBoundingClientRect(); if (e.clientX >= h.left && e.clientX <= h.right && e.clientY >= h.top && e.clientY <= h.bottom) cross = { x: (e.clientX - h.left) / h.width * hero.offsetWidth, y: (e.clientY - h.top) / h.height * hero.offsetHeight, o: 1 }; }
+      if (this.raf) return;
+      this.raf = requestAnimationFrame(() => { this.raf = 0; this.setState({ tx: tx, ty: ty, cross: cross }); });
+    };
+
+    this.factTimer = setInterval(() => {
+      const sp = (this.state.sc && this.state.sc.abP != null) ? this.state.sc.abP : -1;
+      if (sp < 0.15) { if (this.state.fi) this.setState({ fi: 0 }); return; }
+      if (sp > 0.22 && sp < 1.3) this.setState({ fi: ((this.state.fi || 0) + 1) % 5 });
+    }, 2400);
     window.addEventListener('resize', this.buildBrush);
     this.t1 = setTimeout(this.buildBrush, 200);
     this.t2 = setTimeout(this.buildBrush, 1500);
@@ -343,6 +422,17 @@ class Component extends DCLogic {
       const p = document.getElementById('brushpath');
       if (p && p.getTotalLength) {
         const len = Math.ceil(p.getTotalLength());
+        // reveal depth for every point: how far down you must scroll before it draws; flat runs (underlines) sweep across ~90px of scroll
+        const pts = []; let maxY = -1e9;
+        for (let l = 0; l <= len; l += 6) { const q = p.getPointAtLength(l); maxY = Math.max(maxY, q.y); pts.push({ l: l, y: q.y, base: maxY }); }
+        const tbl = []; let i = 0, rd = -1e9;
+        while (i < pts.length) {
+          let j = i; while (j + 1 < pts.length && pts[j + 1].base - pts[i].base < 1.5) j++;
+          const n = j - i + 1, flat = n > 8;
+          for (let k = i; k <= j; k++) { rd = Math.max(rd, pts[k].base + (flat ? 90 * (k - i) / n : 0)); tbl.push({ l: pts[k].l, y: pts[k].y, maxY: rd }); }
+          i = j + 1;
+        }
+        this.tbl = tbl;
         if (len !== this.state.brushLen) this.setState({ brushLen: len }, this.onScroll);
       }
     }
@@ -350,29 +440,57 @@ class Component extends DCLogic {
   buildBrush() {
     const sec = document.getElementById('work');
     if (!sec) return;
-    const sr = sec.getBoundingClientRect();
-    const H = Math.round(sec.offsetHeight);
-    const titles = sec.querySelectorAll('[data-title]');
+    // everything in layout units (offsets), so page zoom / scaled previews never shift the line
     const abs = (el) => { let x = 0, y = 0; for (let e = el; e; e = e.offsetParent) { x += e.offsetLeft; y += e.offsetTop; } return { x, y }; };
     const so = abs(sec);
+    const H = Math.round(sec.offsetHeight);
+    const W = Math.round(sec.offsetWidth);
     const m = 28;
+    const R = Math.round;
     let d = 'M' + m + ' 0';
     let cy = 0;
-    titles.forEach((t) => {
+    sec.querySelectorAll('[data-title]').forEach((t) => {
       const o = abs(t);
-      const x0 = Math.round(o.x - so.x);
-      const x1 = Math.round(x0 + Math.min(t.offsetWidth, 340));
-      const yb = Math.round(o.y - so.y + t.offsetHeight + 10);
-      d += ' C' + m + ' ' + Math.round(cy + (yb - cy) * 0.55) + ' ' + m + ' ' + (yb - 30) + ' ' + (x0 - 6) + ' ' + yb;
-      d += ' C' + Math.round(x0 + (x1 - x0) * 0.3) + ' ' + (yb + 5) + ' ' + Math.round(x0 + (x1 - x0) * 0.7) + ' ' + (yb - 4) + ' ' + x1 + ' ' + (yb + 1);
-      // one continuous stroke: retrace back through the gap under the title (above the body text), then drop down the left margin
-      d += ' C' + (x1 - 40) + ' ' + (yb + 5) + ' ' + Math.round(x0 + 40) + ' ' + (yb + 5) + ' ' + (x0 - 6) + ' ' + (yb + 4);
-      d += ' C' + (x0 - 18) + ' ' + (yb + 6) + ' ' + m + ' ' + (yb + 8) + ' ' + m + ' ' + (yb + 40);
-      cy = yb + 40;
+      const x0 = R(o.x - so.x), x1 = R(x0 + Math.min(t.offsetWidth, 340));
+      const yb = R(o.y - so.y + t.offsetHeight + 10);
+      const art = t.closest('article');
+      const media = art && art.querySelector('.unveil');
+      const mo = media ? abs(media) : null;
+      const mediaLeft = mo && (mo.x - so.x) < x0;
+      if (mediaLeft) {
+        // photo sits left of the text: go over it, down the gap between photo and text, under the title, and out below it
+        const aTop = R(mo.y - so.y), aBot = R(aTop + media.offsetHeight);
+        const gx = R(((mo.x - so.x) + media.offsetWidth + x0) / 2);
+        d += ' C' + m + ' ' + R(cy + (aTop - 50 - cy) * 0.6) + ' ' + m + ' ' + (aTop - 60) + ' ' + (m + 70) + ' ' + (aTop - 36);
+        d += ' C' + R(m + 70 + (gx - m - 70) * 0.45) + ' ' + (aTop - 24) + ' ' + (gx - 40) + ' ' + (aTop - 30) + ' ' + gx + ' ' + (aTop + 4);
+        d += ' C' + gx + ' ' + R(aTop + (yb - aTop) * 0.5) + ' ' + gx + ' ' + (yb - 26) + ' ' + (x0 - 6) + ' ' + yb;
+        d += ' C' + R(x0 + (x1 - x0) * 0.3) + ' ' + (yb + 5) + ' ' + R(x0 + (x1 - x0) * 0.7) + ' ' + (yb - 4) + ' ' + x1 + ' ' + (yb + 1);
+        d += ' C' + (x1 - 40) + ' ' + (yb + 5) + ' ' + R(x0 + 40) + ' ' + (yb + 5) + ' ' + (x0 - 6) + ' ' + (yb + 4);
+        d += ' C' + (gx + 4) + ' ' + (yb + 10) + ' ' + gx + ' ' + (yb + 30) + ' ' + gx + ' ' + (yb + 70);
+        d += ' C' + gx + ' ' + (aBot + 6) + ' ' + (gx - 10) + ' ' + (aBot + 30) + ' ' + (gx - 70) + ' ' + (aBot + 34);
+        d += ' C' + R(gx - 70 - (gx - m) * 0.45) + ' ' + (aBot + 40) + ' ' + (m + 30) + ' ' + (aBot + 34) + ' ' + m + ' ' + (aBot + 70);
+        cy = aBot + 70;
+      } else {
+        // text on the left: run down the margin, underline the title, slip back through the gap under it, continue down the margin
+        d += ' C' + m + ' ' + R(cy + (yb - cy) * 0.55) + ' ' + m + ' ' + (yb - 30) + ' ' + (x0 - 6) + ' ' + yb;
+        d += ' C' + R(x0 + (x1 - x0) * 0.3) + ' ' + (yb + 5) + ' ' + R(x0 + (x1 - x0) * 0.7) + ' ' + (yb - 4) + ' ' + x1 + ' ' + (yb + 1);
+        d += ' C' + (x1 - 40) + ' ' + (yb + 5) + ' ' + R(x0 + 40) + ' ' + (yb + 5) + ' ' + (x0 - 6) + ' ' + (yb + 4);
+        d += ' C' + (x0 - 18) + ' ' + (yb + 6) + ' ' + m + ' ' + (yb + 8) + ' ' + m + ' ' + (yb + 40);
+        cy = yb + 40;
+      }
     });
-    d += ' C' + m + ' ' + Math.round(cy + (H - 140 - cy) * 0.6) + ' ' + m + ' ' + (H - 150) + ' ' + 300 + ' ' + (H - 170);
-    d += ' C' + 460 + ' ' + (H - 182) + ' ' + 560 + ' ' + (H - 176) + ' ' + 640 + ' ' + (H - 166);
+    d += ' C' + m + ' ' + R(cy + (H - 140 - cy) * 0.6) + ' ' + m + ' ' + (H - 150) + ' ' + 300 + ' ' + (H - 170);
+    d += ' C' + 460 + ' ' + (H - 182) + ' ' + 560 + ' ' + (H - 176) + ' ' + Math.min(640, W - 40) + ' ' + (H - 166);
+    this.secTop = so.y;
     if (d !== this.state.brushD || H !== this.state.brushH) this.setState({ brushD: d, brushH: H });
+  }
+  // length along the path whose point first reaches layout depth y (table built once per path)
+  lenAtY(y) {
+    const t = this.tbl;
+    if (!t || !t.length) return 0;
+    if (y <= t[0].y) return 0;
+    for (let i = 1; i < t.length; i++) if (t[i].maxY >= y) return t[i].l;
+    return t[t.length - 1].l;
   }
   onScroll() {
     if (this.ticking) return;
@@ -390,10 +508,21 @@ class Component extends DCLogic {
       let brushProg = 0, workFill = 0;
       if (sec) {
         const r = sec.getBoundingClientRect();
-        const maxY = Math.max(1, document.documentElement.scrollHeight - vh);
-        const reachAtEnd = vh * 0.72 - (r.top + y - maxY);
-        brushProg = clamp((vh * 0.72 - r.top) / Math.max(60, Math.min(r.height - 120, reachAtEnd)));
         workFill = clamp((vh * 0.5 - r.top) / r.height);
+        // scroll position as a fraction, converted to layout depth: works the same at any zoom, in any browser, and in Play
+        const doc = document.documentElement;
+        const maxS = Math.max(1, doc.scrollHeight - doc.clientHeight);
+        const f = clamp(y / maxS);
+        const Hd = document.body.offsetHeight || sec.offsetHeight;
+        const vhL = Hd * (doc.clientHeight / Math.max(1, doc.scrollHeight));
+        let depth = f * (Hd - vhL) + vhL * 0.62 - (this.secTop || 0);
+        // the page can end before the line does: ease the remaining tail in over the last stretch of scrolling
+        const t = this.tbl, endY = t && t.length ? t[t.length - 1].maxY + 2 : 0;
+        const depthMax = (Hd - vhL) + vhL * 0.62 - (this.secTop || 0);
+        const k = clamp((f - 0.55) / 0.45);
+        if (endY > depthMax) depth += (endY - depthMax) * k * k;
+        const total = this.state.brushLen || 0;
+        if (total) brushProg = clamp(this.lenAtY(depth) / total);
       }
       const nums = {};
       ['s1', 's2', 's3'].forEach((k) => {
@@ -404,7 +533,16 @@ class Component extends DCLogic {
       });
       const doc = document.documentElement;
       const canScroll = (doc.scrollHeight - vh) > 900;
-      this.setState({ sc: { p: p, brushProg: brushProg, workFill: workFill, nums: nums, bar: canScroll && y > dist + 300, pinned: canScroll } });
+      // hero drift + who-I-am ink, both from scroll fraction in layout units
+      const docE = document.documentElement;
+      const fr = clamp(y / Math.max(1, docE.scrollHeight - docE.clientHeight));
+      const HdL = document.body.offsetHeight || 1;
+      const vhLL = HdL * (docE.clientHeight / Math.max(1, docE.scrollHeight));
+      const yL = fr * (HdL - vhLL);
+      const ab = document.getElementById('about-me');
+      let abP = -1;
+      if (ab) { let top = 0; for (let e = ab; e; e = e.offsetParent) top += e.offsetTop; abP = (yL + 72 - top) / Math.max(1, ab.offsetHeight - 720); }
+      this.setState({ sc: { p: p, brushProg: brushProg, workFill: workFill, nums: nums, bar: canScroll && y > dist + 300, pinned: canScroll, heroY: yL, abP: abP } });
     });
   }
   renderVals() {
@@ -430,7 +568,26 @@ class Component extends DCLogic {
         fade: (1 - open).toFixed(3)
       },
       band: { y: ((1 - band) * 72).toFixed(1) + 'px', o: band.toFixed(3), rule: (band * 100).toFixed(1) + '%', write: ((1 - clamp((band - 0.3) / 0.7)) * 100).toFixed(1) + '%' },
-      rv: { s1: cls('s1'), s2: cls('s2'), s3: cls('s3'), e: cls('e') },
+      rv: { s1: cls('s1'), s2: cls('s2'), s3: cls('s3'), e: cls('e'), ab: cls('ab'), ft: cls('ft') },
+      goCls: 'go' + (this.state.io === 'run' ? ' irun' : (this.state.io === 'done' ? ' iplayed' : '')),
+      introOn: this.state.io === 'run',
+      intro: { m: this.state.im === 'board' ? 'board' : '' },
+      ib: this.state.ib || { x: '0px', y: '0px', s: '.3' },
+      skipIntro: this.skipIntro || (() => {}),
+      hero: { shift: (this.reduce ? 0 : Math.min(160, (sc.heroY || 0) * 0.22)).toFixed(1) + 'px', cue: (sc.heroY || 0) > 40 ? '0' : '1' },
+      bw: { v: (this.reduce ? 1 : clamp(((sc.abP == null ? -1 : sc.abP) + 0.64) / 0.3)).toFixed(3) },
+      about: { p: (this.reduce ? 1 : clamp(((sc.abP == null ? -1 : sc.abP) + 0.24) / 0.48)).toFixed(3) },
+      fx: (() => {
+        // basics change on a calm timer once you reach them, so scrolling fast can never flick them past
+        const sp = sc.abP == null ? -1 : sc.abP;
+        const i = this.state.fi || 0;
+        const o = { show: this.reduce || sp > 0.22 ? '1' : '0', num: '0' + (i + 1) };
+        for (let k = 0; k < 5; k++) { o['o' + k] = k === i ? '1' : '0'; o['y' + k] = (k === i ? 0 : (k < i ? -46 : 46)) + 'px'; o['c' + k] = k <= i ? '#283f73' : '#c8d3ea'; }
+        return o;
+      })(),
+      kin: { a: (this.reduce ? 0 : -(sc.heroY || 0) * 0.7).toFixed(1) + 'px', b: (this.reduce ? 0 : (sc.heroY || 0) * 0.5).toFixed(1) + 'px' },
+      halo: { x: ((this.state.ty || 0) * 28).toFixed(1) + 'px', y: ((this.state.tx || 0) * 18).toFixed(1) + 'px', x2: ((this.state.ty || 0) * -22).toFixed(1) + 'px', y2: ((this.state.tx || 0) * -14).toFixed(1) + 'px' },
+      tilt: { x: ((this.state.tx || 0) * -5).toFixed(2) + 'deg', y: ((this.state.ty || 0) * 6).toFixed(2) + 'deg', mx: (this.state.ty || 0).toFixed(3), my: (this.state.tx || 0).toFixed(3) },
       nums: { s1: (nums.s1 || 0) + 'px', s2: (nums.s2 || 0) + 'px', s3: (nums.s3 || 0) + 'px' },
       brush: { d: brushD, h: brushH, dash: len ? String(len) : '0 100000', off: (len * (1 - (sc.brushProg || 0))).toFixed(1) },
       sceneH: pinned ? '1440px' : '840px',

@@ -21,15 +21,15 @@ else{z=Math.min(x/390,1.35)}
 d.style.zoom=z===1?'':String(z);window.__z=z}
 fit();window.addEventListener('resize',fit)})();</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&amp;family=Playfair+Display:ital,wght@0,500;0,600;1,500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&amp;family=Familjen+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&amp;display=swap" rel="stylesheet">
 <style>
 @font-face{font-family:'Thorny Rock';src:url(/assets/1cd9772c3e3c.woff2) format('woff2');font-display:swap}
 body{margin:0}
 a{color:inherit}
 html{scroll-behavior:smooth}
-.brush{font-family:'Thorny Rock','Playfair Display',serif;line-height:1;color:#283f73}
+.brush{font-family:'Thorny Rock','Familjen Grotesk',sans-serif;line-height:1;color:#283f73}
 .pretty{text-wrap:pretty}
-.mB{position:relative;display:inline-flex;align-items:center;min-height:44px;padding:0 4px;text-decoration:none;font-family:'Playfair Display',serif;font-size:20px;color:#111111;transition:color .2s ease}
+.mB{position:relative;display:inline-flex;align-items:center;min-height:44px;padding:0 4px;text-decoration:none;font-family:'Familjen Grotesk',sans-serif;font-size:20px;color:#111111;transition:color .2s ease}
 .mB svg{position:absolute;left:-4px;bottom:2px;width:calc(100% + 8px);height:12px;overflow:visible;pointer-events:none}
 .mB path{stroke-dasharray:140;stroke-dashoffset:140;transition:stroke-dashoffset .5s cubic-bezier(.65,0,.25,1)}
 .mB:hover{color:#283f73}
@@ -56,7 +56,7 @@ html{scroll-behavior:smooth}
 .card-t:focus-visible .img{outline:3px solid currentColor;outline-offset:4px}
 .cap{display:flex;flex-direction:column;gap:8px;padding:0 4px}
 .capmeta{font-size:14px;font-weight:600;letter-spacing:3px;white-space:nowrap}
-.capname{white-space:nowrap;font-family:'Playfair Display',serif;font-weight:600;font-size:30px;line-height:1.1;transition:color .2s ease}
+.capname{white-space:nowrap;font-family:'Familjen Grotesk',sans-serif;font-weight:500;font-size:30px;line-height:1.1;transition:color .2s ease}
 .textlink{display:inline-flex;align-items:center;gap:10px;min-height:44px;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:3px;border-bottom:2px solid currentColor}
 .textlink:hover{opacity:.75}
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}.write-load,.go .rise{animation:none !important}.reveal .brush,.reveal.in .brush{-webkit-mask-position:0 0;mask-position:0 0;transition:none}.reveal .up{opacity:1;translate:none;transition:none}.card-t .img,.go-dot{transition:none}}
@@ -69,7 +69,7 @@ html{scroll-behavior:smooth}
 .crow:hover{background:#c8d3ea}
 .crow:focus-visible{outline:3px solid #283f73;outline-offset:2px}
 .crow .k{width:150px;flex:none;font-size:14px;font-weight:600;letter-spacing:3px;color:#4a4a4f}
-.crow .v{flex:1;font-family:'Playfair Display',serif;font-size:30px;line-height:1.1}
+.crow .v{flex:1;font-family:'Familjen Grotesk',sans-serif;font-size:30px;line-height:1.1}
 .crow .o{width:48px;height:48px;flex:none;border-radius:50%;border:1px solid #283f73;color:#283f73;display:flex;align-items:center;justify-content:center;transition:background-color .25s ease,color .25s ease,transform .25s ease}
 .crow:hover .o{background:#283f73;color:#f8f8f9;transform:translateX(4px)}
 .pill{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 28px;border-radius:999px;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:3px;transition:background-color .2s ease,color .2s ease}
@@ -89,7 +89,6 @@ html{scroll-behavior:smooth}
   <nav aria-label="Sections" style="height: 84px; box-sizing: border-box; padding: 0 56px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #dddbd7; background: #f8f8f9">
     <a href="/" aria-label="Back to the cover" style="display: flex; align-items: center; gap: 14px; text-decoration: none; min-height: 44px">
       <img src="/assets/7fbc09757fa4.png" alt="" style="height: 32px; width: auto">
-      <span style="font-size: 14px; font-weight: 600; letter-spacing: 3px; color: #4a4a4f">VOL. 01 · FALL 2026</span>
     </a>
     <div style="display: flex; gap: 40px">
       <a class="mB" href="/">Home<svg aria-hidden="true" viewBox="0 0 100 12" preserveAspectRatio="none"><path d="M2 8 C25 3 60 4 98 6 M70 10 L96 9" fill="none" stroke="#283f73" stroke-width="2.4" stroke-linecap="round"></path></svg></a>
@@ -102,9 +101,8 @@ html{scroll-behavior:smooth}
     <img src="/assets/60460d8a82f1.png" alt="" aria-hidden="true" style="position: absolute; left: -110px; top: 60px; height: 600px; width: auto; opacity: .08; pointer-events: none; user-select: none; z-index: 0">
     <div style="position: relative; z-index: 1; display: flex; flex-direction: column; gap: 40px">
       <div style="display: flex; flex-direction: column; gap: 18px">
-        <div style="display: flex; align-items: baseline; gap: 18px"><span style="font-size: 14px; font-weight: 600; letter-spacing: 3px; color: #283f73">CONTACT</span><span class="brush write-load" style="--wd: .3s; --wdur: 1.2s; font-size: 40px">say hello</span></div>
-        <h1 style="margin: 0; font-family: 'Playfair Display', serif; font-weight: 600; font-size: 64px; line-height: 1.05; letter-spacing: -0.5px">Let’s talk!</h1>
-        <p class="pretty" style="margin: 0; max-width: 640px; font-size: 19px; line-height: 1.55; color: #3a3a3f">I’m looking for design roles. Email is the fastest way to reach me.</p>
+        <div style="display: flex; align-items: baseline; gap: 18px"><span style="font-size: 14px; font-weight: 600; letter-spacing: 3px; color: #283f73">CONTACT</span></div>
+        <h1 style="margin: 0; font-family: 'Familjen Grotesk', sans-serif; font-weight: 500; font-size: 64px; line-height: 1.05; letter-spacing: -0.5px">Let’s talk!</h1>
       </div>
       <div style="display: flex; flex-direction: column; border-top: 2px solid #111111">
       <a class="crow" href="mailto:saniyap@usc.edu"><span class="k">EMAIL</span><span class="v">saniyap@usc.edu</span><span class="o"><svg aria-hidden="true" width="20" height="13" viewBox="0 0 22 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 7 H20"></path><path d="M14 1 L20 7 L14 13"></path></svg></span></a>

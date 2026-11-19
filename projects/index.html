@@ -21,15 +21,15 @@ else{z=Math.min(x/390,1.35)}
 d.style.zoom=z===1?'':String(z);window.__z=z}
 fit();window.addEventListener('resize',fit)})();</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&amp;family=Playfair+Display:ital,wght@0,500;0,600;1,500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&amp;family=Familjen+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&amp;display=swap" rel="stylesheet">
 <style>
 @font-face{font-family:'Thorny Rock';src:url(/assets/1cd9772c3e3c.woff2) format('woff2');font-display:swap}
 body{margin:0}
 a{color:inherit}
 html{scroll-behavior:smooth}
-.brush{font-family:'Thorny Rock','Playfair Display',serif;line-height:1;color:#283f73}
+.brush{font-family:'Thorny Rock','Familjen Grotesk',sans-serif;line-height:1;color:#283f73}
 .pretty{text-wrap:pretty}
-.mB{position:relative;display:inline-flex;align-items:center;min-height:44px;padding:0 4px;text-decoration:none;font-family:'Playfair Display',serif;font-size:20px;color:#111111;transition:color .2s ease}
+.mB{position:relative;display:inline-flex;align-items:center;min-height:44px;padding:0 4px;text-decoration:none;font-family:'Familjen Grotesk',sans-serif;font-size:20px;color:#111111;transition:color .2s ease}
 .mB svg{position:absolute;left:-4px;bottom:2px;width:calc(100% + 8px);height:12px;overflow:visible;pointer-events:none}
 .mB path{stroke-dasharray:140;stroke-dashoffset:140;transition:stroke-dashoffset .5s cubic-bezier(.65,0,.25,1)}
 .mB:hover{color:#283f73}
@@ -56,7 +56,7 @@ html{scroll-behavior:smooth}
 .card-t:focus-visible .img{outline:3px solid currentColor;outline-offset:4px}
 .cap{display:flex;flex-direction:column;gap:8px;padding:0 4px}
 .capmeta{font-size:14px;font-weight:600;letter-spacing:3px;white-space:nowrap}
-.capname{white-space:nowrap;font-family:'Playfair Display',serif;font-weight:600;font-size:30px;line-height:1.1;transition:color .2s ease}
+.capname{white-space:nowrap;font-family:'Familjen Grotesk',sans-serif;font-weight:500;font-size:30px;line-height:1.1;transition:color .2s ease}
 .textlink{display:inline-flex;align-items:center;gap:10px;min-height:44px;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:3px;border-bottom:2px solid currentColor}
 .textlink:hover{opacity:.75}
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}.write-load,.go .rise{animation:none !important}.reveal .brush,.reveal.in .brush{-webkit-mask-position:0 0;mask-position:0 0;transition:none}.reveal .up{opacity:1;translate:none;transition:none}.card-t .img,.go-dot{transition:none}}
@@ -78,7 +78,7 @@ html{scroll-behavior:smooth}
 .pillbar{position:sticky;top:0;z-index:20;display:flex;flex-direction:column;align-items:center;gap:10px;padding:14px 56px 16px;background:rgba(248,248,249,.94);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid #dddbd7}
 .pills{position:relative;display:flex;gap:10px;padding:6px;border-radius:999px;background:#ffffff;border:1px solid #dddbd7}
 .hl{position:absolute;top:6px;left:6px;width:250px;height:52px;border-radius:999px;transition:transform .55s cubic-bezier(.65,0,.25,1),background-color .55s ease;box-shadow:0 6px 16px rgba(40,63,115,.18)}
-.pill{position:relative;z-index:1;width:250px;height:52px;display:inline-flex;align-items:center;justify-content:center;gap:10px;border:none;border-radius:999px;background:transparent;cursor:pointer;font-family:'Playfair Display',serif;font-size:20px;color:#111111;transition:color .4s ease}
+.pill{position:relative;z-index:1;width:250px;height:52px;display:inline-flex;align-items:center;justify-content:center;gap:10px;border:none;border-radius:999px;background:transparent;cursor:pointer;font-family:'Familjen Grotesk',sans-serif;font-size:20px;color:#111111;transition:color .4s ease}
 .pill:hover{color:#283f73}
 .pill.on,.pill.on:hover{color:var(--on)}
 .pill .cnt{font-family:'Inter Tight',sans-serif;font-size:14px;font-weight:600;letter-spacing:1px;opacity:.7}
@@ -90,7 +90,7 @@ html{scroll-behavior:smooth}
 .chap{animation:bandIn .7s cubic-bezier(.65,0,.25,1) both}
 .chap .in{animation:swIn .75s cubic-bezier(.2,.7,.2,1) calc(var(--d,.1s) + .25s) both}
 .chap .pen{animation:writeOn 1.4s cubic-bezier(.45,.05,.3,1) .35s both}
-.ghostnum{position:absolute;left:-30px;top:520px;font-family:'Playfair Display',serif;font-style:italic;font-weight:500;font-size:560px;line-height:.8;letter-spacing:-20px;pointer-events:none;user-select:none;animation:ghostIn 1.1s cubic-bezier(.2,.7,.2,1) .2s both}
+.ghostnum{position:absolute;left:-30px;top:520px;font-family:'Familjen Grotesk',sans-serif;font-style:italic;font-weight:400;font-size:560px;line-height:.8;letter-spacing:-20px;pointer-events:none;user-select:none;animation:ghostIn 1.1s cubic-bezier(.2,.7,.2,1) .2s both}
 @media (prefers-reduced-motion: reduce){.go .toc,.chap,.chap .in,.chap .pen,.ghostnum{animation:none}.hl{transition:none}.toc,.toc .arr{transition:none}}
 </style>
 <link rel="stylesheet" href="/assets/site.css">
@@ -103,7 +103,6 @@ html{scroll-behavior:smooth}
   <nav aria-label="Sections" style="height: 84px; box-sizing: border-box; padding: 0 56px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #dddbd7; background: #f8f8f9">
     <a href="/" aria-label="Back to the cover" style="display: flex; align-items: center; gap: 14px; text-decoration: none; min-height: 44px">
       <img src="/assets/7fbc09757fa4.png" alt="" style="height: 32px; width: auto">
-      <span style="font-size: 14px; font-weight: 600; letter-spacing: 3px; color: #4a4a4f">VOL. 01 · FALL 2026</span>
     </a>
     <div style="display: flex; gap: 40px">
       <a class="mB" href="/">Home<svg aria-hidden="true" viewBox="0 0 100 12" preserveAspectRatio="none"><path d="M2 8 C25 3 60 4 98 6 M70 10 L96 9" fill="none" stroke="#283f73" stroke-width="2.4" stroke-linecap="round"></path></svg></a>
@@ -113,34 +112,9 @@ html{scroll-behavior:smooth}
     </div>
   </nav>
 
-  <header style="padding: 64px 56px 56px; display: flex; justify-content: space-between; align-items: center; gap: 48px">
-    <div style="display: flex; flex-direction: column; gap: 22px; max-width: 560px">
-      <span class="rise" style="font-size: 14px; font-weight: 600; letter-spacing: 3px; color: #4a4a4f">01 — THE WORK</span>
-      <span class="brush write-load" style="--wd: .3s; --wdur: 1.8s; font-size: 150px; align-self: flex-start">projects</span>
-      <p class="rise" style="--d: .5s; margin: 0; font-family: 'Playfair Display', serif; font-weight: 500; font-size: 40px; line-height: 1.15">Three ways I turn<br>ideas into real work.</p>
-      <span class="rise" style="--d: .6s; font-size: 17px; color: #3a3a3f">15 projects in 3 chapters</span>
-    </div>
-    <nav class="tocwrap" aria-label="Chapter pages">
-      <span style="font-size: 14px; font-weight: 600; letter-spacing: 3px; color: #4a4a4f; padding-bottom: 14px; border-bottom: 2px solid #111111">CONTENTS · OPEN A CHAPTER</span>
-        <a class="toc" href="/projects/company-sprints/" style="--tint: #c8d3ea; --tintInk: #111111">
-          <span style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 20px; color: #283f73; width: 34px">01</span>
-          <span style="flex: 1; font-family: 'Playfair Display', serif; font-weight: 500; font-size: 30px; line-height: 1">Company Sprints</span>
-          <span class="cnt" style="font-size: 14px; font-weight: 600; letter-spacing: 3px">FULL CHAPTER</span>
-          <svg class="arr" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13 L13 3"></path><path d="M5 3 H13 V11"></path></svg>
-        </a>
-        <a class="toc" href="/projects/pitches/" style="--tint: #283f73; --tintInk: #f8f8f9">
-          <span style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 20px; color: #283f73; width: 34px">02</span>
-          <span style="flex: 1; font-family: 'Playfair Display', serif; font-weight: 500; font-size: 30px; line-height: 1">Pitches</span>
-          <span class="cnt" style="font-size: 14px; font-weight: 600; letter-spacing: 3px">FULL CHAPTER</span>
-          <svg class="arr" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13 L13 3"></path><path d="M5 3 H13 V11"></path></svg>
-        </a>
-        <a class="toc" href="/projects/art-design/" style="--tint: #ebe6dd; --tintInk: #111111">
-          <span style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 20px; color: #283f73; width: 34px">03</span>
-          <span style="flex: 1; font-family: 'Playfair Display', serif; font-weight: 500; font-size: 30px; line-height: 1">Art & Design</span>
-          <span class="cnt" style="font-size: 14px; font-weight: 600; letter-spacing: 3px">FULL CHAPTER</span>
-          <svg class="arr" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13 L13 3"></path><path d="M5 3 H13 V11"></path></svg>
-        </a>
-    </nav>
+  <header style="padding: 72px 56px 44px; display: flex; flex-direction: column; align-items: center; gap: 22px; text-align: center">
+    <span class="brush write-load" style="--wd: .3s; --wdur: 1.8s; font-size: 150px; align-self: center">projects</span>
+    <p class="rise" style="--d: .5s; margin: 0; font-family: 'Familjen Grotesk', sans-serif; font-weight: 400; font-size: 40px; line-height: 1.15">Three ways I turn ideas into real work.</p>
   </header>
 
   <div id="tabs" class="pillbar">
@@ -161,11 +135,6 @@ html{scroll-behavior:smooth}
         <span class="in" style="font-size: 14px; font-weight: 600; letter-spacing: 3px; color: #4a4a4f">CHAPTER 01 OF 03</span>
         <span class="brush pen" style="font-size: 80px; line-height: .95; color: #283f73; align-self: flex-start">company<br>sprints</span>
         <p class="in pretty" style="--d: .3s; margin: 0; font-size: 17px; line-height: 1.5; color: #3a3a3f; max-width: 340px">Real briefs from real companies, solved in fast team sprints.</p>
-        <div class="in" style="--d: .4s; display: flex; gap: 10px; align-items: center; border-top: 1px solid #4a4a4f; padding-top: 16px; max-width: 300px">
-          <span style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 30px; line-height: 1; color: #283f73">5</span>
-          <span style="font-size: 14px; font-weight: 600; letter-spacing: 3px; color: #4a4a4f">PROJECTS</span>
-        </div>
-        <a class="in textlink" href="/projects/company-sprints/" style="--d: .5s; align-self: flex-start; color: #111111">READ THE FULL CHAPTER</a>
       </div>
       <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 52px 28px">
           <a class="card-t in" href="/work/spotify/" style="--d: 0.15s; --sh: rgba(40,63,115,.18); grid-column: span 2;" aria-label="Open Spotify">
@@ -200,11 +169,6 @@ html{scroll-behavior:smooth}
         <span class="in" style="font-size: 14px; font-weight: 600; letter-spacing: 3px; color: #c8d3ea">CHAPTER 02 OF 03</span>
         <span class="brush pen" style="font-size: 80px; line-height: .95; color: #c8d3ea; align-self: flex-start">pitches</span>
         <p class="in pretty" style="--d: .3s; margin: 0; font-size: 17px; line-height: 1.5; color: #dde4f1; max-width: 340px">Startup ideas I helped shape, from research to the final deck.</p>
-        <div class="in" style="--d: .4s; display: flex; gap: 10px; align-items: center; border-top: 1px solid #c8d3ea; padding-top: 16px; max-width: 300px">
-          <span style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 30px; line-height: 1; color: #c8d3ea">6</span>
-          <span style="font-size: 14px; font-weight: 600; letter-spacing: 3px; color: #c8d3ea">PROJECTS</span>
-        </div>
-        <a class="in textlink" href="/projects/pitches/" style="--d: .5s; align-self: flex-start; color: #f8f8f9">READ THE FULL CHAPTER</a>
       </div>
       <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 52px 28px">
           <a class="card-t in" href="/work/synchora/" style="--d: 0.15s; --sh: rgba(8,14,30,.45); grid-column: span 2;" aria-label="Open Synchora">
@@ -243,11 +207,6 @@ html{scroll-behavior:smooth}
         <span class="in" style="font-size: 14px; font-weight: 600; letter-spacing: 3px; color: #4a4a4f">CHAPTER 03 OF 03</span>
         <span class="brush pen" style="font-size: 80px; line-height: .95; color: #283f73; align-self: flex-start">art and<br>design</span>
         <p class="in pretty" style="--d: .3s; margin: 0; font-size: 17px; line-height: 1.5; color: #3a3a3f; max-width: 340px">Brands, logos and things I make with my hands.</p>
-        <div class="in" style="--d: .4s; display: flex; gap: 10px; align-items: center; border-top: 1px solid #4a4a4f; padding-top: 16px; max-width: 300px">
-          <span style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 30px; line-height: 1; color: #283f73">4</span>
-          <span style="font-size: 14px; font-weight: 600; letter-spacing: 3px; color: #4a4a4f">PROJECTS</span>
-        </div>
-        <a class="in textlink" href="/projects/art-design/" style="--d: .5s; align-self: flex-start; color: #111111">READ THE FULL CHAPTER</a>
       </div>
       <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 52px 28px">
           <a class="card-t in" href="/work/arista/" style="--d: 0.15s; --sh: rgba(58,48,30,.18); grid-column: span 2;" aria-label="Open Arista">
@@ -275,7 +234,7 @@ html{scroll-behavior:smooth}
     <div style="border-top: 2px solid #111111; padding-top: 32px; display: flex; justify-content: space-between; align-items: flex-end; gap: 40px">
       <div style="display: flex; flex-direction: column; gap: 12px">
         <span style="font-size: 14px; font-weight: 600; letter-spacing: 3px; color: #4a4a4f">NEXT IN THIS ISSUE</span>
-        <a href="/about/" style="display: flex; align-items: baseline; gap: 18px; text-decoration: none"><span style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 30px; color: #283f73">02</span><span style="font-family: 'Playfair Display', serif; font-weight: 600; font-size: 40px; line-height: 1">About</span></a>
+        <a href="/about/" style="display: flex; align-items: baseline; gap: 18px; text-decoration: none"><span style="font-family: 'Familjen Grotesk', sans-serif; font-style: italic; font-size: 30px; color: #283f73">02</span><span style="font-family: 'Familjen Grotesk', sans-serif; font-weight: 500; font-size: 40px; line-height: 1">About</span></a>
       </div>
       <a class="textlink" href="/">BACK TO THE COVER</a>
     </div>

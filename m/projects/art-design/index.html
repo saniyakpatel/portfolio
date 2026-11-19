@@ -21,15 +21,15 @@ else{z=Math.min(x/390,1.35)}
 d.style.zoom=z===1?'':String(z);window.__z=z}
 fit();window.addEventListener('resize',fit)})();</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&amp;family=Playfair+Display:ital,wght@0,500;0,600;1,500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&amp;family=Familjen+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&amp;display=swap" rel="stylesheet">
 <style>
 @font-face{font-family:'Thorny Rock';src:url(/assets/1cd9772c3e3c.woff2) format('woff2');font-display:swap}
 body{margin:0}
 a{color:inherit}
 html{scroll-behavior:smooth}
-.brush{font-family:'Thorny Rock','Playfair Display',serif;line-height:1;color:#283f73}
+.brush{font-family:'Thorny Rock','Familjen Grotesk',sans-serif;line-height:1;color:#283f73}
 .pretty{text-wrap:pretty}
-.mB{position:relative;display:inline-flex;align-items:center;min-height:44px;padding:0 4px;text-decoration:none;font-family:'Playfair Display',serif;font-size:20px;color:#111111;transition:color .2s ease}
+.mB{position:relative;display:inline-flex;align-items:center;min-height:44px;padding:0 4px;text-decoration:none;font-family:'Familjen Grotesk',sans-serif;font-size:20px;color:#111111;transition:color .2s ease}
 .mB svg{position:absolute;left:-4px;bottom:2px;width:calc(100% + 8px);height:12px;overflow:visible;pointer-events:none}
 .mB path{stroke-dasharray:140;stroke-dashoffset:140;transition:stroke-dashoffset .5s cubic-bezier(.65,0,.25,1)}
 .mB:hover{color:#283f73}
@@ -56,7 +56,7 @@ html{scroll-behavior:smooth}
 .card-t:focus-visible .img{outline:3px solid currentColor;outline-offset:4px}
 .cap{display:flex;flex-direction:column;gap:8px;padding:0 4px}
 .capmeta{font-size:14px;font-weight:600;letter-spacing:3px;white-space:nowrap}
-.capname{white-space:nowrap;font-family:'Playfair Display',serif;font-weight:600;font-size:30px;line-height:1.1;transition:color .2s ease}
+.capname{white-space:nowrap;font-family:'Familjen Grotesk',sans-serif;font-weight:500;font-size:30px;line-height:1.1;transition:color .2s ease}
 .textlink{display:inline-flex;align-items:center;gap:10px;min-height:44px;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:3px;border-bottom:2px solid currentColor}
 .textlink:hover{opacity:.75}
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}.write-load,.go .rise{animation:none !important}.reveal .brush,.reveal.in .brush{-webkit-mask-position:0 0;mask-position:0 0;transition:none}.reveal .up{opacity:1;translate:none;transition:none}.card-t .img,.go-dot{transition:none}}
@@ -67,7 +67,7 @@ html{scroll-behavior:smooth}
 .menu{display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 18px;border-radius:999px;border:1px solid #c9c6c1;background:#ffffff;font-family:'Inter Tight',sans-serif;font-size:14px;font-weight:600;letter-spacing:3px;color:#111111;text-decoration:none}
 .tabs{display:flex;gap:8px;overflow-x:auto;padding:14px 20px;scrollbar-width:none;background:rgba(248,248,249,.94);border-bottom:1px solid #dddbd7;position:sticky;top:64px;z-index:25}
 .tabs::-webkit-scrollbar{display:none}
-.tab{flex:none;display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 18px;border-radius:999px;border:1px solid #c9c6c1;background:#ffffff;text-decoration:none;font-family:'Playfair Display',serif;font-size:17px;color:#111111;white-space:nowrap}
+.tab{flex:none;display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 18px;border-radius:999px;border:1px solid #c9c6c1;background:#ffffff;text-decoration:none;font-family:'Familjen Grotesk',sans-serif;font-size:17px;color:#111111;white-space:nowrap}
 .tab.on{background:#283f73;border-color:#283f73;color:#f8f8f9}
 .tab .cnt{font-family:'Inter Tight',sans-serif;font-size:14px;font-weight:600;opacity:.7}
 .mcards{display:flex;flex-direction:column;gap:40px}
@@ -78,7 +78,7 @@ html{scroll-behavior:smooth}
 .msheet{position:absolute;inset:0 0 auto 0;min-height:844px;z-index:60;background:#283f73;color:#f8f8f9;padding:16px 20px 40px;box-sizing:border-box;display:flex;flex-direction:column;gap:28px;animation:mIn .35s cubic-bezier(.2,.7,.2,1) both}
 .msheet .brush{animation:writeOn 1.4s cubic-bezier(.45,.05,.3,1) .2s both}
 .mclose{width:48px;height:48px;border-radius:50%;border:1px solid rgba(248,248,249,.4);background:transparent;color:#f8f8f9;display:flex;align-items:center;justify-content:center;cursor:pointer}
-.mlink{display:flex;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid rgba(248,248,249,.2);text-decoration:none;color:#f8f8f9;font-family:'Playfair Display',serif;font-size:40px;line-height:1.1}
+.mlink{display:flex;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid rgba(248,248,249,.2);text-decoration:none;color:#f8f8f9;font-family:'Familjen Grotesk',sans-serif;font-size:40px;line-height:1.1}
 .mlink.on{font-style:italic;color:#c8d3ea}
 .mlink .n{font-size:15px;font-style:italic;color:#c8d3ea}
 @media (prefers-reduced-motion: reduce){.msheet{animation:none}}
@@ -96,7 +96,7 @@ html{scroll-behavior:smooth}
   <sc-if value="{{menu}}" hint-placeholder-val="{{ false }}">
   <nav class="msheet" aria-label="Menu">
     <div style="display: flex; justify-content: space-between; align-items: center">
-      <span style="font-size: 14px; font-weight: 600; letter-spacing: 3px; color: #c8d3ea">VOL. 01 · FALL 2026</span>
+      <span aria-hidden="true"></span>
       <button class="mclose" onClick="{{closeMenu}}" aria-label="Close menu"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2 2 L14 14"></path><path d="M14 2 L2 14"></path></svg></button>
     </div>
     <span class="brush" style="font-size: 64px; color: #c8d3ea; align-self: flex-start">saniya patel</span>
@@ -111,7 +111,7 @@ html{scroll-behavior:smooth}
   <header style="padding: 36px 20px 24px; display: flex; flex-direction: column; gap: 14px">
     <span style="font-size: 14px; font-weight: 600; letter-spacing: 3px; color: #4a4a4f">01 — THE WORK</span>
     <span class="brush write-load" style="--wd: .2s; --wdur: 1.5s; font-size: 88px; align-self: flex-start">projects</span>
-    <p style="margin: 0; font-family: 'Playfair Display', serif; font-weight: 500; font-size: 30px; line-height: 1.15">Three ways I turn<br>ideas into real work.</p>
+    <p style="margin: 0; font-family: 'Familjen Grotesk', sans-serif; font-weight: 400; font-size: 30px; line-height: 1.15">Three ways I turn<br>ideas into real work.</p>
   </header>
   <nav class="tabs" aria-label="Project chapters">
     <a class="tab" href="/m/projects/">Company Sprints<span class="cnt">5</span></a>
@@ -146,7 +146,7 @@ html{scroll-behavior:smooth}
   <footer style="padding: 40px 20px 48px; display: flex; flex-direction: column; gap: 20px">
     <div style="border-top: 2px solid #111111; padding-top: 20px; display: flex; flex-direction: column; gap: 8px">
       <span style="font-size: 14px; font-weight: 600; letter-spacing: 3px; color: #4a4a4f">NEXT IN THIS ISSUE</span>
-      <a href="/about/" style="display: flex; align-items: baseline; gap: 14px; text-decoration: none"><span style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 20px; color: #283f73">02</span><span style="font-family: 'Playfair Display', serif; font-weight: 600; font-size: 30px; line-height: 1">About</span></a>
+      <a href="/about/" style="display: flex; align-items: baseline; gap: 14px; text-decoration: none"><span style="font-family: 'Familjen Grotesk', sans-serif; font-style: italic; font-size: 20px; color: #283f73">02</span><span style="font-family: 'Familjen Grotesk', sans-serif; font-weight: 500; font-size: 30px; line-height: 1">About</span></a>
     </div>
   </footer>
 </div>
